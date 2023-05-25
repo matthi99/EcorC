@@ -12,7 +12,7 @@ import cv2
 
 
 #3d data
-train_folder='DATA/emidec-trainset/'
+train_folder='DATA/emidec-dataset-1.0.1/'
 save_folder='DATA/traindata/'
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
