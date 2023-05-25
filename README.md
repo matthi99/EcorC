@@ -69,7 +69,7 @@ Predictions and plots of the results will be saved in `RESULTS_FOLDER/testset`.
 
 
 ## Authors and acknowledgment
-Matthias Schwab<sup>1</sup>, Mathias Pamminer<sup>1</sup>, Christian Kremser <sup>1</sup>, Daniel Obmann <sup>2</sup>, Markus Haltmeier <sup>2</sup>, Agnes Mayr <sup>1</sup>
+Matthias Schwab<sup>1</sup>, Mathias Pamminger<sup>1</sup>, Christian Kremser <sup>1</sup>, Daniel Obmann <sup>2</sup>, Markus Haltmeier <sup>2</sup>, Agnes Mayr <sup>1</sup>
 
 <sup>1</sup> University Hospital for Radiology, Medical University Innsbruck, Anichstraße 35, 6020 Innsbruck, Austria 
 
