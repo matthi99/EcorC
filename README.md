@@ -46,9 +46,9 @@ python3 preprocessing.py
 
 To train the two dimensional U-Nets run the command
 ```
-python3 2d-net.py --fold FOLD 
+python3 2d-net.py --fold XXX 
 ``` 
-- `--fold` specifies on which on which od the five folds the network should be trained 
+- `--fold` specifies on which on which od the five folds (0,1,2,3,4) the network should be trained 
 
 ### 2D-3D cascade
 
