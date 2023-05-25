@@ -75,3 +75,4 @@ for patient in train_patients:
         data2d['masks']=data['masks'][i,...]
         np.save(save_folder2d+patient[0:5]+patient[-3:]+'_'+str(i)+'.npy', data2d)
         
+print("Data prepared!")
