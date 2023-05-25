@@ -2,10 +2,10 @@
 
 
 
-This repository is created for learning non-linear regularizing filters for inverting the Radon transform. For more detail about non-linear regularizing filters see:
+This repository is created for the publication:
 
 ```
-Ebner, A., & Haltmeier, M. (2023). When noise and data collide: Using non-linear Filters to save the day in inverse problems. Best Journal you can imagine, 62, 66-83.
+Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (2023). Error correcting 2D-3D cascaded network for myocardial infarct scar segmentation on late gadolinium enhancement cardiac magnetic resonance images. Best Journal you can imagine, 62, 66-83.
 ```
 
 
@@ -18,7 +18,7 @@ git clone https://git.uibk.ac.at/c7021123/error-correcting-2d-3d-cascaded-networ
 
 2. Intall and activate the virtual environment.
 ```
-cd learned-filters
+cd error-correcting-2d-3d-cascaded-network-for-myocardial-infarct-segmentation
 conda env create -f env_lge.yml
 conda activate env_lge
 ``` 
@@ -52,11 +52,11 @@ python3 2d-net.py --fold FOLD
 
 ### 2D-3D cascade
 
-To train the two dimensional U-Nets run the command
+To train the Error correcting 2D-3D cascaded framewor run the command
 ```
 python3 2d-net.py --fold FOLD 
 ``` 
-- `--fold` specifies on which on which od the five folds the network should be trained 
+Note that to be able to train the cascade the 2D U-Net had to be trained beforehand. 
 
 ## Testing
 
@@ -69,11 +69,11 @@ Predictions and plots of the results will be saved in `RESULTS_FOLDER/testset`.
 
 
 ## Authors and acknowledgment
-Matthias Schwab<sup>1,2</sup>, Andrea Ebner<sup>1</sup>
+Matthias Schwab<sup>1</sup>, Mathias Pamminer<sup>1</sup>, Christian Kremser <sup>1</sup>, Daniel Obmann <sup>2</sup>, Markus Haltmeier <sup>2</sup>, Agnes Mayr <sup>1</sup>
 
-<sup>1</sup> Department of Mathematics, University of Innsbruck, Technikerstrasse 13, 6020 Innsbruck, Austria
+<sup>1</sup> University Hospital for Radiology, Medical University Innsbruck, Anichstraße 35, 6020 Innsbruck, Austria 
 
-<sup>2</sup> University Hospital for Radiology, Medical University Innsbruck, Anichstraße 35, 6020 Innsbruck, Austria
+<sup>2</sup> Department of Mathematics, University of Innsbruck, Technikerstrasse 13, 6020 Innsbruck, Austria
 
 
 
