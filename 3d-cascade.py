@@ -8,7 +8,7 @@ Created on Wed Jan 25 11:24:17 2023
 import torch
 
 from utils.architectures import get_network
-from utils.utils_training import Histogram, plot_examples, save_checkpoint, get_logger, CascadeAugmentation_all_channels
+from utils.utils_training import Histogram, plot_examples, save_checkpoint, get_logger, CascadeAugmentation
 from dataloader import CardioDataset, CardioCollatorMulticlass
 from utils.metrics import get_metric
 from utils.losses import get_loss
@@ -30,7 +30,7 @@ parser.add_argument('--start_filters', type=int, default=32)
 parser.add_argument('--out_channels', type=int, default=5)
 parser.add_argument('--activation', type=str, default="leakyrelu")
 parser.add_argument('--dropout', type=float, default=0.1)
-parser.add_argument('--disruption', nargs='+', type=float, default= [0.05, 0.05, 0.05, 0.1, 0.05, 0.02, 0.68] )
+parser.add_argument('--disruption', nargs='+', type=float, default= [0.1, 0.05, 0.1, 0.1, 0.02, 0.63] )
 parser.add_argument('--fold',  help= "On which fold should be trained (number between 0 and 4)", type=int, default=0)
 parser.add_argument('--data3d', help= "Path to data folder", type=str, 
                     default="DATA/traindata/")
@@ -66,7 +66,7 @@ config = {
         "dropout": args.dropout,
         "batchnorm": args.batchnorm,
         "start_filters": args.start_filters,
-        "in_channels":6,
+        "in_channels":3,
         "out_channels": args.out_channels,
         "kernel_size": [[1, 3, 3],[1, 3, 3],[3, 3, 3],[3, 3, 3],[3, 3, 3]],
         "padding": [[0, 1, 1],[0, 1, 1],[1, 1, 1],[1, 1, 1],[1, 1, 1]],
@@ -123,7 +123,7 @@ classes=config["classes"]
 histogram=Histogram(classes, metrics)
 
 #dont know yet what to do with disruptions!!!
-aug = CascadeAugmentation_all_channels(probs= args.disruption)
+aug = CascadeAugmentation(probs= args.disruption)
 
 
 #train
@@ -138,10 +138,10 @@ for epoch in  range(args.epochs):
         loss=0
         gt= torch.cat([mask[key].float() for key in mask.keys()],1)
         if epoch > 100: 
-            out2d= aug.augment(net2d, im, gt)
+            out2d= aug.augment(net2d, im, gt, epoch)
         else:
-            out2d = aug.augment(net2d, im, gt, do_nothing=True)
-        
+            out2d = aug.augment(net2d, im, gt, epoch, do_nothing=True)
+            
         
         in3d=torch.cat((im,out2d),1)
         out=net3d(in3d)
@@ -184,7 +184,7 @@ for epoch in  range(args.epochs):
                 temp=torch.argmax(temp,0).long()
                 temp=torch.nn.functional.one_hot(temp,5)
                 temp=torch.moveaxis(temp,-1,0)
-                out2d.append(temp)
+                out2d.append(temp[3:,...])
             
             out2d=torch.stack(out2d,0)
             in3d=torch.cat((im,out2d),1)

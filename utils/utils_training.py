@@ -335,10 +335,6 @@ class CascadeAugmentation():
     def augment(self, net2d, im, gt, epoch, per_batch =True, do_nothing=False)  :
         disruption_list = [self.delete_class, self.delete_slices, self.delete_all, self.add_scar, self.add_mvo,  self.nothing]
         in2d=torch.moveaxis(im,2,0)
-        if do_nothing:
-            index=-1
-        else:
-            index=np.random.choice(np.arange(6), p=self.probs)
         out2d=[]
         with torch.no_grad():
             for b in range(im.shape[0]):
@@ -347,6 +343,10 @@ class CascadeAugmentation():
                 temp=torch.argmax(temp,0).long()
                 temp=torch.nn.functional.one_hot(temp,5)
                 temp=torch.moveaxis(temp,-1,0)[3:,...].float()
+                if do_nothing:
+                    index=-1
+                else:
+                    index=np.random.choice(np.arange(6), p=self.probs)
                 fun= disruption_list[index]
                 if index == 3:
                     muscle= gt[b,2,...]*im[b,0,...]
@@ -357,110 +357,7 @@ class CascadeAugmentation():
         return out2d
 
 
-class CascadeAugmentation_all_channels():
-    def __init__(self, probs):
-        self.probs = probs
-        
-    @staticmethod
-    def mvo_as_muscle(out2d):
-        out2d[2,...]+=out2d[4,...]
-        out2d[4,...]=0
-        return out2d
     
-    @staticmethod
-    def scar_as_muscle(out2d):
-        sl=np.random.randint(0,out2d.shape[1])
-        out2d[2,sl,...]+=out2d[3,sl,...]
-        out2d[3,sl,...]=0
-        return out2d
-    
-    @staticmethod
-    def scar_as_blood(out2d):
-        sl=np.random.randint(0,out2d.shape[1])
-        out2d[1,sl,...]+=out2d[3,sl,...]
-        out2d[3,sl,...]=0
-        return out2d
-   
-        
-    @staticmethod
-    def delete_all(out2d):
-        out2d=torch.zeros_like(out2d)
-        return out2d
-    
-    @staticmethod
-    def add_scar(out2d, muscle):
-        device= torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        sl=np.random.randint(0,out2d.shape[1])
-        muscle= muscle[sl].cpu().detach().numpy()
-        temp=muscle[muscle!=0]
-        if len(temp)!=0:
-            per = np.percentile(temp, 85)
-            muscle[muscle<per]=0
-            muscle[muscle!=0]=1
-            labels = measure.label(muscle)
-            assert( labels.max() != 0 ) # assume at least 1 CC
-            largestCC = labels == np.argmax(np.bincount(labels.flat)[1:])+1
-            created_scar = largestCC*1
-            created_scar = torch.from_numpy(created_scar).to(device)
-            out2d[3,sl,...]+=((1-out2d[3,sl,...])*created_scar)
-        return out2d
-    
-    @staticmethod
-    def add_mvo(out2d):
-        scar= out2d[3,...].clone().detach()
-        mvo = out2d[4,...].clone().detach()
-        if torch.sum(scar)!=0:
-            indices= scar.nonzero()
-            index=indices[np.random.randint(0,len(indices))].cpu().detach().numpy()
-            n=[]
-            for i in range(-1,2):
-                for j in range(-1,2):
-                    temp=torch.tensor(index)
-                    temp[-1]+=i
-                    temp[-2]+=j
-                    n.append(temp)
-            for pixel in n:
-                if np.random.uniform() < 0.5:
-                    scar[pixel[0], pixel[1], pixel[2]]=0
-                    mvo[pixel[0], pixel[1], pixel[2]]=1
-            out2d[3,...]=scar
-            out2d[4,...]=mvo
-            # plt.figure()
-            # plt.imshow(out2d[0,pixel[0],...].cpu()+2*out2d[1,pixel[0],...].cpu())
-            # plt.show()
-            # plt.close()
-        
-        return out2d
-     
-        
-        
-    @staticmethod
-    def nothing(out2d):
-        return out2d
-    
-    def augment(self, net2d, im, gt, do_nothing=False)  :
-        disruption_list = [self.mvo_as_muscle, self.scar_as_muscle, self.scar_as_blood, self.delete_all, self.add_scar, self.add_mvo,  self.nothing]
-        in2d=torch.moveaxis(im,2,0)
-        if do_nothing:
-            index=-1
-        else:
-            index=np.random.choice(np.arange(7), p=self.probs)
-        out2d=[]
-        with torch.no_grad():
-            for b in range(im.shape[0]):
-                temp=net2d(in2d[:,b,...])[0]
-                temp=torch.moveaxis(temp,0,1)
-                temp=torch.argmax(temp,0).long()
-                temp=torch.nn.functional.one_hot(temp,5)
-                temp=torch.moveaxis(temp,-1,0).float()
-                fun= disruption_list[index]
-                if index == 4:
-                    muscle= gt[b,2,...]*im[b,0,...]
-                    out2d.append(fun(temp,muscle))
-                else:
-                    out2d.append(fun(temp))
-            out2d=torch.stack(out2d,0)
-        return out2d    
     
     
 # def calculate_center(patient, net, folder="download/"):
