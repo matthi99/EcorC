@@ -46,7 +46,7 @@ python3 preprocessing.py
 
 To train the two dimensional U-Nets run the command
 ```
-python3 2d-net.py --fold XXX 
+python 2d-net.py --fold XXX 
 ``` 
 - `--fold` specifies on which on which od the five folds (0,1,2,3,4) the network should be trained 
 
@@ -54,7 +54,7 @@ python3 2d-net.py --fold XXX
 
 To train the Error correcting 2D-3D cascaded framewor run the command
 ```
-python3 2d-net.py --fold FOLD 
+python 3d-cascade.py --fold XXX
 ``` 
 Note that to be able to train the cascade the 2D U-Net had to be trained beforehand. 
 
@@ -62,7 +62,7 @@ Note that to be able to train the cascade the 2D U-Net had to be trained beforeh
 
 To test the final framework on the testset of the EMICED callenge run 
 ```
-python3 inference.py 
+python inference.py 
 
 ``` 
 Predictions and plots of the results will be saved in `RESULTS_FOLDER/testset`.
