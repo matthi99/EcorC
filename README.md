@@ -13,12 +13,12 @@ Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (202
 
 1. Clone the git repository. 
 ```
-git clone https://git.uibk.ac.at/c7021123/error-correcting-2d-3d-cascaded-network-for-myocardial-infarct-segmentation.git
+git clone https://github.com/matthi99/EcorC.git
 ``` 
 
 2. Intall and activate the virtual environment.
 ```
-cd error-correcting-2d-3d-cascaded-network-for-myocardial-infarct-segmentation
+cd EcorC
 conda env create -f env_lge.yml
 conda activate env_lge
 ``` 
@@ -36,7 +36,7 @@ Note that for training the testset folder is optional and does not have to be pr
 
 2. Prepare the downloaded dataset for training. For this run the following command in your console
 ```
-python3 preprocessing.py 
+python preprocessing.py 
 ``` 
 
 
@@ -60,7 +60,7 @@ Note that to be able to train the cascade the 2D U-Net had to be trained beforeh
 
 ## Testing
 
-To test the final framework on the testset of the EMICED callenge run 
+When both 2D and 3D cascade were trained on all folds you can test the final framework on the testset of the EMICED callenge. For this run 
 ```
 python inference.py 
 
