@@ -7,18 +7,11 @@ Created on Tue Jun 20 13:03:27 2023
 
 import torch
 import os
-
-
 from utils.architectures import get_network
-
-
 import json
 import numpy as np
 import yaml
-
 import nibabel as nib
-
-
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches 
 
@@ -48,14 +41,15 @@ def normalize(img):
         img[i,...]=(img[i,...] - np.mean(img[i,...])) / np.std(img[i,...])
     return img
 
+
 folder="DATA/emidec-segmentation-testset-1.0.0/"
 patients= [f for f in os.listdir(folder) if os.path.isdir(folder+f)]
-
 
 savepath="RESULTS_FOLDER/testset/"
 if not os.path.exists(savepath):
     os.makedirs(savepath)
     
+
 for patient in patients:
     if not os.path.exists(os.path.join(savepath,patient)):
         os.makedirs(os.path.join(savepath,patient))
@@ -67,7 +61,6 @@ for patient in patients:
     img_roi=img[:,center[0]-48 : center[0]+48, center[1]-48: center[1]+48].copy()
     img_roi=normalize(img_roi)
     im = torch.from_numpy(img_roi[None,None, ...].astype("float32")).to(device)
-    print(patient)
     for i in range(5):
         path=f"RESULTS_FOLDER/2d-net_{i}"
         net2d=load_2dnet(path)
@@ -105,7 +98,6 @@ for patient in patients:
 
     segmentation=np.ma.masked_where(result ==0, result)
     segmentation-=1
-    #img= images[case]
     for i in range(img.shape[0]):
         plt.figure()
         plt.subplot(1,2,1)
@@ -125,6 +117,7 @@ for patient in patients:
             
         plt.savefig(os.path.join(savepath,patient,f"Slice_{i}.png"), bbox_inches='tight', dpi=500)
         plt.show()
+    print("Saved results for",patient)
         
 
 
