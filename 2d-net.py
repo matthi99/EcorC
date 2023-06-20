@@ -55,7 +55,7 @@ logger= get_logger(savefolder)
 device= torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 logger.info(f"Training on {device}")
 config = {
-        "losses": ["dice"],
+        "losses": ["dice", "bce"],
         "dice":{"p":2, "depth":3, "weights":[1, 0.5, 0.25]},
         "ce": {"depth":3, "weights":[1, 0.5, 0.25]},
         "bce":{},
