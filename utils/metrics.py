@@ -7,7 +7,39 @@ Created on Wed Jan 26 16:05:38 2022
 
 import torch
 
+class DiceMetric(torch.nn.Module):
+    """
+    Dice metric function for training a multi class segmentation network.
+    The prediction of the network should be of type softmax(...) and the target should be one-hot encoded.
+    """
 
+    def __init__(self, **kwargs):
+        super(DiceMetric, self).__init__()
+        self.num_classes = kwargs.get("num_classes", 1)
+        self.weights = kwargs.get("weights", self.num_classes * [1])
+        self.smooth = kwargs.get("smooth", 0)
+        
+
+    def forward(self, prediction, target):
+        bs = prediction.size(0)
+        cl = prediction.size(1)
+        p = prediction.view(bs,cl, -1)
+        t = target.view(bs,cl, -1)
+
+        intersection = (p * t).sum(2)
+        total = (p+t).sum(2)
+        
+        dice_coeff=torch.zeros(bs, cl)
+        for i in range(bs):
+            for j in range(cl):
+                if total[i,j] == 0:
+                    dice_coeff[i,j]=1
+                else:
+                   dice_coeff[i,j]=((2 * intersection[i,j]) / (total[i,j] )) 
+        dice_coeff= torch.mean(dice_coeff,0)
+        return dice_coeff[1:]
+       
+        
 class HausdorffDistance(torch.nn.Module):
     """
     Implements the pixel Hausdorff-distance using the following logic:
@@ -51,40 +83,6 @@ class HausdorffDistance(torch.nn.Module):
         if self.reduction == "mean":
             return torch.tensor(hd).mean()
         return torch.tensor(hd)
-
-
-class DiceMetric(torch.nn.Module):
-    """
-    Dice metric function for training a multi class segmentation network.
-    The prediction of the network should be of type softmax(...) and the target should be one-hot encoded.
-    """
-
-    def __init__(self, **kwargs):
-        super(DiceMetric, self).__init__()
-        self.num_classes = kwargs.get("num_classes", 1)
-        self.weights = kwargs.get("weights", self.num_classes * [1])
-        self.smooth = kwargs.get("smooth", 0)
-        
-
-    def forward(self, prediction, target):
-        bs = prediction.size(0)
-        cl = prediction.size(1)
-        p = prediction.view(bs,cl, -1)
-        t = target.view(bs,cl, -1)
-
-        intersection = (p * t).sum(2)
-        total = (p+t).sum(2)
-        
-        dice_coeff=torch.zeros(bs, cl)
-        for i in range(bs):
-            for j in range(cl):
-                if total[i,j] == 0:
-                    dice_coeff[i,j]=1
-                else:
-                   dice_coeff[i,j]=((2 * intersection[i,j]) / (total[i,j] )) 
-        dice_coeff= torch.mean(dice_coeff,0)
-        return dice_coeff[1:]
-       
 
 
 def get_metric(metric="dice", **kwargs):

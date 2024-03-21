@@ -10,13 +10,23 @@ import torch
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-import matplotlib.patches as mpatches 
 import logging
 import sys
-import shutil
-import matplotlib.backends.backend_pdf
 import random
 from skimage import measure
+from utils.unet import UNet, UNet2D
+
+
+def get_network(architecture="unet", device="cuda:0", **kwargs):
+    architecture = architecture.lower()
+    if architecture == "unet":
+        net = UNet(**kwargs)
+    elif architecture == "unet2d":
+        net = UNet2D(**kwargs)
+
+    else:
+        net = UNet(**kwargs)
+    return net.to(device=device)
 
 
 class Histogram():
@@ -53,7 +63,7 @@ class Histogram():
         #make output binary
         with torch.no_grad():
             temp=torch.argmax(out,1).long()
-            temp=torch.nn.functional.one_hot(temp,5)
+            temp=torch.nn.functional.one_hot(temp,len(self.classes)+1)
             out=torch.moveaxis(temp, -1, 1)
         for m in self.metrics:
             with torch.no_grad():
@@ -69,7 +79,7 @@ class Histogram():
         #make output binary
         with torch.no_grad():
             temp=torch.argmax(out,1).long()
-            temp=torch.nn.functional.one_hot(temp,5)
+            temp=torch.nn.functional.one_hot(temp,len(self.classes)+1)
             out=torch.moveaxis(temp, -1, 1)
         for m in self.metrics:
             with torch.no_grad():
@@ -117,7 +127,7 @@ class Histogram():
         plt.figure()
         plt.plot(np.array(self.hist["loss"]))
         plt.title("Loss")
-        plt.savefig(savefolder+f"Loss.png", dpi=300, bbox_inches="tight", pad_inches=0.1)
+        plt.savefig(os.path.join(savefolder,"Loss.png"), dpi=300, bbox_inches="tight", pad_inches=0.1)
         plt.close()
         for m in self.metrics:
             # plot mean metric
@@ -125,148 +135,39 @@ class Histogram():
             plt.plot(np.array(self.hist[m]["train_mean"]))
             plt.plot(np.array(self.hist[m]["val_mean"]))
             plt.title(f"Mean {m}")
-            plt.savefig(savefolder+f"Mean {m}.png", dpi=300, bbox_inches="tight", pad_inches=0.1)
+            plt.savefig(os.path.join(savefolder,f"Mean {m}.png"), dpi=300, bbox_inches="tight", pad_inches=0.1)
             plt.close()
             #plot metric for different classes
             for cl in self.classes:
                 plt.figure()
                 plt.plot(np.array(self.hist[m][f"train_{cl}"]))
                 plt.plot(np.array(self.hist[m][f"val_{cl}"]))
-                plt.savefig(savefolder+f"{m} {cl}.png", dpi=300, bbox_inches="tight", pad_inches=0.1)
+                plt.savefig(os.path.join(savefolder,f"{m} {cl}.png"), dpi=300, bbox_inches="tight", pad_inches=0.1)
                 plt.close()
             
-                
-            
-       
-def plot_examples(im, out, epoch, savefolder, train=True)    :
-    dir=os.path.join(savefolder,f"Epoch_{epoch}")  
-    if train:
-        if os.path.exists(dir):
-            shutil.rmtree(dir)
-        os.makedirs(dir)   
-    if len(im.shape)==5:
-        im=im[0,0,...]
-        out= out[0,...]
-    else:
-        im=im[:,0,...]
-        out=torch.moveaxis(out, 0, 1)
-    img= im.cpu().detach().numpy()
-    prob=out.cpu().detach().numpy()
-    classes=np.argmax(prob,0)
-    #plot a maximum of 6 images per epoch
-    for i in range(min(classes.shape[0],6)):
-        plt.figure()
-        plt.subplot(1,2,1)
-        plt.imshow(img[i,...], cmap="gray")
-        plt.axis('off')
-        
-        plt.subplot(1,2,2)
-        plt.imshow(classes[i])
-        plt.colorbar()
-        plt.axis('off')
-    
-        if train:
-            path=os.path.join(dir, f"train{i}.png")
-        else:
-            path=os.path.join(dir, f"val{i}.png")
-        plt.savefig(path, dpi=300, bbox_inches="tight", pad_inches=0.1)
-        plt.close()    
-    
-    
-        
 
-def save_checkpoint(net, checkpoint_dir, fold, name="weights", savepath=False, z_dim=False):
+def save_checkpoint(net, checkpoint_dir, name="weights"):
     checkpoint_path = os.path.join(checkpoint_dir, f"{name}.pth")
     torch.save(net.state_dict(), checkpoint_path)
-    if savepath:
-        if not os.path.exists('paths/'):
-            os.makedirs('paths/')
-        if z_dim==True:
-            with open(f"paths/best_weights3d_{fold}.txt", "w") as text_file:
-                text_file.write(checkpoint_dir+"/")
-        else:
-            with open(f"paths/best_weights2d_{fold}.txt", "w") as text_file:
-                text_file.write(checkpoint_dir+"/")
-            
-        
     
-def isNaN(num):
-    return num!= num
-
-        
-def plot_test_data(im,out, mask, patient, dicecoeff, classes, folder):      
-    im_np=im[0, 0, ...].cpu().detach().numpy()
-    out_np=out.cpu().detach().numpy()
-    mask_blood=mask["blood"].float().cpu().detach().numpy()
-    mask_muscle=((mask["heart"]*(1-mask["blood"]))*(1-mask["scar"])).float().cpu().detach().numpy()
-    mask_scar=mask["scar"].float().float().cpu().detach().numpy()
-             
-    seg=mask_blood[0,0,...]+2*mask_muscle[0,0,...]+3*mask_scar[0,0,...]
-    seg=seg-1
-    seg=np.ma.masked_where(seg ==-1, seg)
-             
-    seg_pred=out_np
-    seg_pred=np.ma.masked_where(seg_pred >=3, seg_pred)
-    pdf = matplotlib.backends.backend_pdf.PdfPages(folder+'testplots/'+patient[0][0:-4]+'.pdf')
-    for i in range(len(seg)):
-        fig, axs = plt.subplots(1,3,  constrained_layout=True, dpi=500)
-                 
-        axs[0].imshow(im_np[i], cmap='gray')
-        axs[0].axis('off')
-        axs[0].set_title("Input")
-        axs[1].imshow(im_np[i], cmap='gray')
-        axs[1].imshow(seg_pred[i],'jet', interpolation='none', alpha=0.5, vmin = 0, vmax = 2)
-        axs[1].set_title("NN Segmentation")
-        axs[1].axis('off')
-        axs[2].imshow(im_np[i], cmap='gray')
-        mat=axs[2].imshow(seg[i], 'jet',  interpolation='none', alpha=0.5, vmin = 0, vmax = 2)
-        axs[2].set_title("Ground truth")
-        axs[2].axis('off')
-        
-        values = np.array([0,1,2])
-        colors = [ mat.cmap(mat.norm(value)) for value in values]
-        patches = [ mpatches.Patch(color=colors[i], label="{l}".format(l=classes[i]) ) for i in range(len(values)) ]
-        plt.legend(handles=patches, loc='lower right',  bbox_to_anchor=(0.85, -0.4, 0.2, 0.2) )
-        plt.suptitle("Dice coefficient: " + str(round(dicecoeff,2)))
-        pdf.savefig()
-        plt.show()
-        plt.close()
-
-    pdf.close()
-    plt.close()
-
-def binary(mask):
-    arg=torch.argmax(mask,1)
-    
-    blood=torch.zeros_like(arg)
-    blood[arg==1]=1
-    blood=blood[:,None,...]
-    
-    muscle=torch.zeros_like(arg)
-    muscle[arg==2]=1
-    muscle=muscle[:,None,...]
-    
-    scar=torch.zeros_like(arg)
-    scar[arg==3]=1
-    scar=scar[:,None,...]
-    
-    mvo=torch.zeros_like(arg)
-    mvo[arg==4]=1
-    mvo=mvo[:,None,...]
-    return blood, muscle, scar, mvo
 
 class CascadeAugmentation():
-    def __init__(self, probs):
+    def __init__(self, probs, data_set):
         self.probs = probs
+        self.data_set = data_set
         
-    @staticmethod
-    def delete_class(out2d):
+    
+    def delete_class(self, out2d):
         sl=np.random.randint(0,out2d.shape[1])
-        if np.random.uniform() < 0.4:
+        if self.data_set == "EMIDEC":
+            if np.random.uniform() < 0.4:
+                out2d[0,sl,...]=0
+            else:
+                out2d[1,sl,...]=0
+            return out2d
+        elif self.data_set == "MyoPS":
             out2d[0,sl,...]=0
-        else:
-            out2d[1,sl,...]=0
-        return out2d
+            return out2d
         
     @staticmethod
     def delete_slices(out2d):
@@ -288,7 +189,8 @@ class CascadeAugmentation():
         muscle= muscle[sl].cpu().detach().numpy()
         temp=muscle[muscle!=0]
         if len(temp)!=0:
-            per = np.percentile(temp, 85)
+            cut = np.random.uniform(70,90)
+            per = np.percentile(temp, cut)
             muscle[muscle<per]=0
             muscle[muscle!=0]=1
             labels = measure.label(muscle)
@@ -319,134 +221,85 @@ class CascadeAugmentation():
                     mvo[pixel[0], pixel[1], pixel[2]]=1
             out2d[0,...]=scar
             out2d[1,...]=mvo
-            # plt.figure()
-            # plt.imshow(out2d[0,pixel[0],...].cpu()+2*out2d[1,pixel[0],...].cpu())
-            # plt.show()
-            # plt.close()
-        
         return out2d
      
+    @staticmethod
+    def remove_scar(out2d, scar):
+        device= torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        full_scar= scar.cpu().detach().numpy()
         
+        sl=np.random.randint(0,out2d.shape[1])
+        scar= full_scar[sl]
+        temp=scar[scar!=0]
+        if len(temp)!=0:
+            cut = np.random.uniform(30,50)
+            per = np.percentile(temp, cut)
+            scar[scar>per]=0
+            scar[scar!=0]=1
+            labels = measure.label(scar)
+            assert( labels.max() != 0 ) # assume at least 1 CC
+            largestCC = labels == np.argmax(np.bincount(labels.flat)[1:])+1
+            remove_scar = largestCC*1
+            remove_scar = torch.from_numpy(remove_scar).to(device)
+            
+            out2d[0,sl,...]-= (out2d[0,sl,...]*remove_scar)
+        return out2d    
         
     @staticmethod
     def nothing(out2d):
         return out2d
     
-    def augment(self, net2d, im, gt, epoch, per_batch =True, do_nothing=False)  :
-        disruption_list = [self.delete_class, self.delete_slices, self.delete_all, self.add_scar, self.add_mvo,  self.nothing]
+    def augment(self, net2d, im, gt, epoch, per_batch =True, do_nothing=False):
         in2d=torch.moveaxis(im,2,0)
         out2d=[]
-        with torch.no_grad():
-            for b in range(im.shape[0]):
-                temp=net2d(in2d[:,b,...])[0]
-                temp=torch.moveaxis(temp,0,1)
-                temp=torch.argmax(temp,0).long()
-                temp=torch.nn.functional.one_hot(temp,5)
-                temp=torch.moveaxis(temp,-1,0)[3:,...].float()
-                if do_nothing:
-                    index=-1
-                else:
-                    index=np.random.choice(np.arange(6), p=self.probs)
-                fun= disruption_list[index]
-                if index == 3:
-                    muscle= gt[b,2,...]*im[b,0,...]
-                    out2d.append(fun(temp,muscle))
-                else:
-                    out2d.append(fun(temp))
-            out2d=torch.stack(out2d,0)
-        return out2d
+        if self.data_set=="EMIDEC":
+            disruption_list = [self.delete_class, self.delete_slices, self.delete_all, self.add_scar, self.add_mvo,  self.nothing]
+            with torch.no_grad():
+                for b in range(im.shape[0]):
+                    temp=net2d(in2d[:,b,...])[0]
+                    temp=torch.moveaxis(temp,0,1)
+                    temp=torch.argmax(temp,0).long()
+                    temp=torch.nn.functional.one_hot(temp,5)
+                    temp=torch.moveaxis(temp,-1,0)[3:,...].float()
+                    if do_nothing:
+                        index=-1
+                    else:
+                        index=np.random.choice(np.arange(6), p=self.probs)
+                    fun= disruption_list[index]
+                    if index == 3:
+                        muscle= gt[b,2,...]*im[b,0,...]
+                        out2d.append(fun(temp,muscle))
+                    else:
+                        out2d.append(fun(temp))
+                out2d=torch.stack(out2d,0)
+            return out2d
+        elif self.data_set == "MyoPS":
+            disruption_list = [self.delete_class, self.delete_slices, self.delete_all, self.add_scar, self.remove_scar,  self.nothing]
+            with torch.no_grad():
+                for b in range(im.shape[0]):
+                    temp=net2d(in2d[:,b,...])[0]
+                    temp=torch.moveaxis(temp,0,1)
+                    temp=torch.argmax(temp,0).long()
+                    temp=torch.nn.functional.one_hot(temp,4)
+                    temp=torch.moveaxis(temp,-1,0)[3:4,...].float()
+                    if do_nothing:
+                        index=-1
+                    else:
+                        index=np.random.choice(np.arange(6), p=self.probs)
+                    fun= disruption_list[index]
+                    if index == 3:
+                        muscle= gt[b,2,...]*im[b,0,...]
+                        out2d.append(fun(temp,muscle))
+                    elif index == 4:
+                        scar= gt[b,3,...]*im[b,0,...]
+                        out2d.append(fun(temp,scar))
+                    else:
+                        out2d.append(fun(temp))
 
-
-    
-    
-    
-# def calculate_center(patient, net, folder="download/"):
-#     #device = "cuda" if torch.cuda.is_available() else "cpu"
-#     device="cpu"
-#     datadir = os.path.join(folder, patient)
-#     files = [x for x in os.walk(datadir)][-1]
-#     root = files[0]
-#     filenames = files[-1]
-#     data=[]
-    
-#     for file in filenames:
-#         data.append(pydicom.dcmread(root + "/" + file))
-#     data = sorted(data, key = lambda k: k.get('InstanceNumber'))
-#     X=np.zeros((len(data),256,256))
-#     for i in range(len(data)):
-#         X[i,...]=Normalize(constant_pad(data[i].pixel_array))
-#     X=np.expand_dims(X, axis=0)
-#     X=np.expand_dims(X, axis=0)
-#     X =torch.from_numpy(X)
-#     X=X.type(torch.FloatTensor)
-#     X=X.to(device)
-#     pred=net(X)
-#     mask = pred >= 0.5
-#     middle=mask[0,0,(len(data)//2)+1,:,:].cpu().numpy()
-#     labels = label(middle)
-#     #print(np.bincount(labels.flat))
-#     middle = labels == np.argmax(np.bincount(labels.flat)[1:])+1
-#     # plt.figure()
-#     # plt.imshow(X[0,0,(len(data)//2)+1,:,:].cpu().detach().numpy())
-#     # plt.imshow(middle, alpha=0.5)
-#     # plt.colorbar()
-#     # plt.show()
-#     center=ndimage.measurements.center_of_mass(middle*1)
-#     if isNaN(center[0]):
-#         print("problem:", patient)
-#         center=np.array([116, 105])
-#     return (int(center[0]), int(center[1]))
-    
-
-# def calculate_center_2d(patient, net, folder="download/"):
-#     device="cpu"
-#     datadir = os.path.join(folder, patient)
-#     files = [x for x in os.walk(datadir)][-1]
-#     root = files[0]
-#     filenames = files[-1]
-#     data=[]
-    
-#     for file in filenames:
-#         data.append(pydicom.dcmread(root + "/" + file))
-#     data = sorted(data, key = lambda k: k.get('InstanceNumber'))
-#     middle=Normalize(constant_pad(data[(len(data)//2)+1].pixel_array))
-#     if patient == "Patient34":
-#         middle=np.rot90(middle, k=-1).copy()
-#     X=np.expand_dims(middle, axis=0)
-#     X=np.expand_dims(X, axis=0)
-#     X =torch.from_numpy(X)
-#     X=X.type(torch.FloatTensor)
-#     X=X.to(device)
-#     pred=net(X)
-#     mask=pred[0,0,:,:]
-#     mask[mask>0.5]=1
-#     mask[mask<1]=0
-#     mask=mask.cpu().detach().numpy()
-#     center=ndimage.measurements.center_of_mass(mask)
-    
-#     # plt.figure()
-#     # plt.imshow(X[0,0,:,:].cpu().detach().numpy(), cmap="gray")
-#     # ma= np.ma.masked_where(mask < 1, mask)
-#     # plt.imshow(ma, 'jet', interpolation='none',alpha=0.5)
-#     # plt.plot(center[1], center[0], "og", markersize=4) 
-#     # plt.axis('off')
-#     # plt.show()
-#     if isNaN(center[0]):
-#         print("problem:", patient)
-#         center=np.array([116, 105])
-#     return (int(center[0]), int(center[1]))
-
-
-
-
-
-def Normalize(img):
-    return (img - np.mean(img)) / np.std(img)
-
-def constant_pad(x, c=2048):
-     padding_size = ((0, 256 - x.shape[0]), (0, 256 - x.shape[1]))
-     return np.pad(x, padding_size, mode='constant', constant_values=c)
-
+                out2d=torch.stack(out2d,0)
+            return out2d
+        else:
+            print("Wrong dataset_name! Possible names are EMIDEC or MyoPS.")
 
 
 def get_logger(name, level=logging.INFO, formatter = '%(asctime)s [%(threadName)s] %(levelname)s %(name)s - %(message)s'):

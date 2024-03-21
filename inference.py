@@ -14,110 +14,89 @@ import yaml
 import nibabel as nib
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches 
+import argparse
+from utils.utils_training import get_logger
+from utils.utils_inference import load_2dnet, load_3dnet, normalize, predict2d, predict3d, plot_prediction
 
 
+parser = argparse.ArgumentParser(description='Define hyperparameters for training.')
+parser.add_argument('dataset_name', type=str, help="Dataset name. Possible choices are EMIDEC or MyoPS")
+#parser.add_argument('--input_folder', type= str, default="")
+#parser.add_argument('--output_folder', type= str, default="RESULTS_FOLDER")
+parser.add_argument('--plots', type=bool, default=True)
+args = parser.parse_args()
 
-classes=["bloodpool", "healthy muscle", "scar", "MVO"]
+#define logger and device
+logger= get_logger(args.dataset_name+"_inference")
 device= torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-def load_2dnet(path):
-    params= yaml.load(open(path + "/config-best_weights.json", 'r'), Loader=yaml.SafeLoader)['network']
-    weights = torch.load(path + "/best_weights.pth",  map_location=torch.device(device))
-    net2d = get_network(architecture='unet2d', device=device, **params)
-    net2d.load_state_dict(weights)
-    net2d.eval()
-    return net2d
 
-def load_3dnet(path):
-    params= yaml.load(open(path + "/config-best_weights.json", 'r'), Loader=yaml.SafeLoader)['network']
-    weights = torch.load(path + "/best_weights.pth",  map_location=torch.device(device))
-    net3d = get_network(architecture='unet', device=device, **params)
-    net3d.load_state_dict(weights)
-    net3d.eval()
-    return net3d
-
-def normalize(img):
-    for i in range(img.shape[0]):
-        img[i,...]=(img[i,...] - np.mean(img[i,...])) / np.std(img[i,...])
-    return img
-
-
-folder="DATA/emidec-segmentation-testset-1.0.0/"
-patients= [f for f in os.listdir(folder) if os.path.isdir(folder+f)]
-
-savepath="RESULTS_FOLDER/testset/"
-if not os.path.exists(savepath):
-    os.makedirs(savepath)
+#load plans
+if args.dataset_name =="EMIDEC":
+    f=open("plans/plans_EMIDEC.json")
+    plans= json.load(f)
+    path_to_testdata= os.path.join(plans["data_folder"], "emidec-segmentation-testset-1.0.0")
+    testfiles=[os.path.join(path_to_testdata,f, "images", f+".nii.gz") for f in os.listdir(path_to_testdata) if os.path.isdir(os.path.join(path_to_testdata,f))]
+    WIDTH=48
+elif args.dataset_name =="MyoPS":
+    f=open("plans/plans_MyoPS.json")
+    plans= json.load(f)
+    path_to_testdata= os.path.join(plans["data_folder"], "MyoPS 2020 Dataset", "test20")
+    testfiles=[os.path.join(path_to_testdata,f) for f in os.listdir(path_to_testdata) if f.endswith("DE.nii.gz")]
+    WIDTH=192
+else:
+    logger.info("Wrong dataset_name! Possible names are EMIDEC or MyoPS.")
     
 
-for patient in patients:
-    if not os.path.exists(os.path.join(savepath,patient)):
-        os.makedirs(os.path.join(savepath,patient))
-    img  = nib.load(os.path.join(folder, patient, 'images', patient+'.nii.gz')).get_fdata()
+path_to_nets= os.path.join(plans["data_folder"], "RESULTS_FOLDER", args.dataset_name)
+savefolder= os.path.join(plans["data_folder"], "RESULTS_FOLDER", args.dataset_name, "inference")
+
+
+for file in testfiles:
+    example = nib.load(file)
+    img= example.get_fdata()
+    shape= img.shape
+    if args.dataset_name =="EMIDEC":
+        patientnr= file.split("_")[-1][0:3]
+    elif args.dataset_name =="MyoPS": 
+        patientnr= file.split("_")[-2]
     center=(img.shape[0]//2, img.shape[1]//2)
     img=np.transpose(img,(2,0,1))
-    np.save(os.path.join(savepath,patient,"image.npy"),img)
-    shape= img.shape
-    img_roi=img[:,center[0]-48 : center[0]+48, center[1]-48: center[1]+48].copy()
-    img_roi=normalize(img_roi)
-    im = torch.from_numpy(img_roi[None,None, ...].astype("float32")).to(device)
+    im=img.copy()
+    im=normalize(im[:,center[0]-WIDTH : center[0]+WIDTH, center[1]-WIDTH: center[1]+WIDTH])
+    im = torch.from_numpy(im[None,None, ...].astype("float32")).to(device)
+    result = torch.zeros(( len(plans["classes"]), im.shape[2], im.shape[3], im.shape[4])).to(device)
     for i in range(5):
-        path=f"RESULTS_FOLDER/2d-net_{i}"
-        net2d=load_2dnet(path)
-        with torch.no_grad():
-            out2d=[]
-            in2d=torch.moveaxis(im,2,0)[:,0,...]
-            temp=net2d(in2d)[0]
-            temp=torch.moveaxis(temp,0,1)
-            temp=torch.argmax(temp,0).long()
-            temp=torch.nn.functional.one_hot(temp,5)
-            temp=torch.moveaxis(temp,-1,0)
-            out2d.append(temp[3:,...])
-            out2d=torch.stack(out2d,0)
-            
+        net2d=load_2dnet(os.path.join(path_to_nets, f"fold_{i}",  "2d-net"), device)
+        net3d=load_3dnet(os.path.join(path_to_nets, f"fold_{i}",  "3d-net"), device)
+    
+        out2d = predict2d(im, net2d, len(plans["classes"]))
+        result += predict3d(im, out2d, net3d, len(plans["classes"]))
         
-        path=f"RESULTS_FOLDER/3d-cascade_{i}"
-        net3d=load_3dnet(path)
-        with torch.no_grad():
-            in3d=torch.cat((im,out2d),1)
-            out3d=net3d(in3d)[0]
-            
-                
-            out3d=torch.argmax(out3d,1).long()
-            out3d=torch.nn.functional.one_hot(out3d,5)
-            out3d=torch.moveaxis(out3d,-1,1).float()
-            if i==0:
-                result=torch.zeros_like(out3d)
-            result+=out3d
-    result= torch.argmax(result,1)[0,...].cpu().detach().numpy()
-    result=np.pad(result, ((0,0),(center[0]-48, shape[1]-(center[0]+48)), (center[1]-48, shape[2]-(center[1]+48))), 
-                           constant_values=0)
-    np.save(os.path.join(savepath,patient,"prediction.npy"),result)
-
-
-
-    segmentation=np.ma.masked_where(result ==0, result)
-    segmentation-=1
-    for i in range(img.shape[0]):
-        plt.figure()
-        plt.subplot(1,2,1)
-        plt.imshow(img[i], cmap='gray')
-        plt.gca().set_title(patient+"_"+str(i))
-        plt.axis('off')
-        plt.subplot(1,2,2)
-        plt.imshow(img[i], cmap='gray')
-        mat=plt.imshow(segmentation[i], 'jet', alpha=0.5, interpolation="none", vmin = 0, vmax = 3)
-        plt.axis('off')
-        plt.gca().set_title('Prediction')
-            
-        values = np.array([0,1,2,3])
-        colors = [ mat.cmap(mat.norm(value)) for value in values]
-        patches = [ mpatches.Patch(color=colors[i], label="{l}".format(l=classes[i]) ) for i in range(len(values)) ]
-        plt.legend(handles=patches, loc='lower right',  bbox_to_anchor=(0.85, -0.4, 0.2, 0.2) )
-            
-        plt.savefig(os.path.join(savepath,patient,f"Slice_{i}.png"), bbox_inches='tight', dpi=500)
-        plt.show()
-    print("Saved results for",patient)
+        out2d = torch.flip(predict2d(torch.flip(im, dims=[3]), net2d, len(plans["classes"])), dims=[2])
+        result += predict3d(im, out2d, net3d, len(plans["classes"]))
         
+        out2d = torch.flip(predict2d(torch.flip(im, dims=[4]), net2d, len(plans["classes"])), dims=[3])
+        result += predict3d(im, out2d, net3d, len(plans["classes"]))
+        
+    result= torch.argmax(result,0).cpu().detach().numpy()
+    result=np.pad(result, ((0,0),(center[0]-WIDTH, shape[0]-(center[0]+WIDTH)), (center[1]-WIDTH, shape[1]-(center[1]+WIDTH))), 
+                            constant_values=0)
+    
+    
+    prediction = nib.Nifti1Image(result, example.affine, example.header)
+    if not os.path.exists(os.path.join(savefolder, f"Case_{patientnr}")):
+        os.makedirs(os.path.join(savefolder, f"Case_{patientnr}"))
+    nib.save(prediction, os.path.join(savefolder,f"Case_{patientnr}", f"Case_{patientnr}.nii.gz"))
+    if args.plots:
+        plot_prediction(img, result, patientnr, plans["classes"][1:], savefolder)
+    
+    logger.info(f"Saved results for Case_{patientnr}")
+    
+
+logger.info(f"All predctions saved in {savefolder}")
+
+
+
 
 

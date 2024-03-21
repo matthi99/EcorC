@@ -11,8 +11,6 @@ import torch.nn.functional as F
 import numpy as np
 
 
-
-
 class Interpolate(nn.Module):
     """
     https://discuss.pytorch.org/t/using-nn-function-interpolate-inside-nn-sequential/23588
@@ -28,8 +26,6 @@ class Interpolate(nn.Module):
     def forward(self, x):
         x = self.interp(x, scale_factor=self.scale_factor, size=self.size, mode=self.mode)
         return x
-
-
 
 
 class ConvBlock(nn.Module):

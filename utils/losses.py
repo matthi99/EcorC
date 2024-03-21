@@ -6,7 +6,6 @@ Created on Wed Jan 26 16:05:37 2022
 """
 
 import torch
-#import kornia
 from torch import nn
 
 
@@ -48,36 +47,6 @@ class DiceLoss(torch.nn.Module):
         else:
             return self._single_class(prediction, target)
 
-class NetReclassificationImprovement(torch.nn.Module):
-    """
-    reclassification
-    """
-
-    def __init__(self, **kwargs):
-        super(NetReclassificationImprovement, self).__init__()
-        self.smooth = kwargs.get("smooth", 1)
-
-
-    def forward(self, prediction2d, prediction3d, target):
-        bs = prediction2d.size(0)
-        cl = prediction2d.size(1)
-        p2 = prediction2d.reshape(bs,cl, -1)
-        p3 = prediction3d.reshape(bs,cl, -1)
-        t = target.reshape(bs,cl, -1)
-        corr_rec_as_1 = (p3 * t * (1-p2)).sum(2)
-        wro_rec_as_0 = ((1-p3) *t * p2).sum(2)
-        corr_rec_as_0 = ((1-p3) * (1-t) * p2).sum(2)
-        wro_rec_as_1 = (p3 * (1-t) * (1-p2)).sum(2)
-        
-        total_1 = t.sum(2)
-        total_0 = (1-t).sum(2)
-        
-        class_1 = ((corr_rec_as_1-wro_rec_as_0)/(total_1+self.smooth))
-        class_0 =((corr_rec_as_0-wro_rec_as_1)/(total_0))
-        loss= - class_0- class_1
-        loss = torch.mean(loss,1)
-        return loss.mean()
-    
     
 class CrossEntropyLoss(torch.nn.Module):
     """
@@ -92,7 +61,7 @@ class CrossEntropyLoss(torch.nn.Module):
         self._single_class = nn.CrossEntropyLoss(ignore_index=0)
 
     def forward(self, prediction, target, deep_supervision=False):
-        target=target.long()
+        target=torch.argmax(target,1).long()
         if deep_supervision:
             loss=0
             L=self.depth
@@ -103,34 +72,11 @@ class CrossEntropyLoss(torch.nn.Module):
             return self._single_class(prediction, target)
 
 
-
-
-class BinaryCrossEntropyLoss(torch.nn.Module):
-    def __init__(self, **kwargs):
-        super(BinaryCrossEntropyLoss, self).__init__()
-        self.eps = 1e-7
-
-        #self.single_loss = torch.nn.BCELoss()
-    def forward(self, prediction, target, alpha=0.5):
-        
-        loss= -alpha * target * prediction.clamp(min=self.eps).log() - (
-                1 - alpha) * (1 - target) * (1 - prediction).clamp(min=self.eps).log()
-        return torch.mean(loss)
-
-
-
-
-
-
 def get_loss(crit="error", **kwargs):
-    if crit == "bce":
-        return BinaryCrossEntropyLoss(**kwargs)
-    elif crit == "dice":
+    if crit == "dice":
         return DiceLoss(**kwargs)
     elif crit =="ce":
         return CrossEntropyLoss()
-    elif crit =="nri":
-        return NetReclassificationImprovement()
     else:
         return print("wrong crit!")
 

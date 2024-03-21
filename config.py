@@ -5,22 +5,10 @@ Created on Mon Dec 19 11:43:42 2022
 @author: A0067501
 """
 
-import yaml
-import numpy as np
 
-
-class Config:
-    train_patients = [  1,   2,   3,   5,   6,   7,   8,  10,  11,  13,  14,  15,  16,
-                      17,  18,  19,  20,  21,  22,  23,  24,  25,  26,  27,  28,  29,
-                      30,  31,  33,  34,  35,  37,  38,  40,  41,  42,  43,  44,  45,
-                      46,  47,  48,  49,  50,  51,  52,  53,  54,  55,  56,  57,  58,
-                      59,  60,  61,  62,  63,  64,  65,  66,  67,  68,  69,  70,  71,
-                      72,  73,  74,  75,  76,  77,  78,  79,  80,  81,  82,  83,  84,
-                      86,  87,  88,  89,  90,  91,  92,  93,  97,  98,  99, 100]
-    val_patients =  [ 4, 12, 39,  9, 36, 85, 32, 94, 95, 96]
+class Config_EMIDEC:
+    
     all_patients=[i for i in range(1,101)]
-    
-    
     
     cross_validation={} #same cross validationa as nnunet
     for i in range(5):
@@ -37,10 +25,6 @@ class Config:
             if p not in cross_validation['fold_'+str(i)]['val']:
                 cross_validation['fold_'+str(i)]['train'].append(p)
     
-    
-    classes = ["bg", "blood", "muscle", "scar", "mvo"]
-    fill_color = 0
-    
     train_data_setup_2d = {
         "spatialtransform":{
             "do_elastic_deform":True, 
@@ -50,6 +34,8 @@ class Config:
             "mode": "mean"
             },
         "ROI": {
+            "width": 48,
+            "height": 48,
             "translation":5
             },
         "gamma": {
@@ -85,6 +71,8 @@ class Config:
             "mode": "mean"
             },
         "ROI": {
+            "width": 48,
+            "height": 48,
             "translation": 5
             },
         "gamma": {
@@ -119,14 +107,118 @@ class Config:
             "translation": 0
             },
     }  
-    test_data_setup = {
+    
+     
+
+
+
+class Config_MyoPS:
+    all_patients = [i for i in range(101,126)]
+    
+    cross_validation={} #same cross validationa as nnunet
+    for i in range(5):
+        cross_validation['fold_'+str(i)]={}
+    cross_validation['fold_0']['val']=[109,114,117,120,122]
+    cross_validation['fold_1']['val']=[104,111,113,116,118]
+    cross_validation['fold_2']['val']=[101,107,108,112,119]
+    cross_validation['fold_3']['val']=[115,121,123,124,125]
+    cross_validation['fold_4']['val']=[102,103,105,106,110]
+    
+    for i in range(5):
+        cross_validation['fold_'+str(i)]['train']=[]
+        for p in all_patients:
+            if p not in cross_validation['fold_'+str(i)]['val']:
+                cross_validation['fold_'+str(i)]['train'].append(p)
+    
+    
+    train_data_setup_2d = {
+        "spatialtransform":{
+            "do_elastic_deform":True, 
+            "alpha":(0.,175.),
+            },
+        
         "normalize": {
             "mode": "mean"
             },
         "ROI": {
+            "width": 192,
+            "height": 192,
+            "translation": 4
+            },
+        "gamma": {
+            "retain_stats":True, 
+            "gamma_range": (0.65, 1.55), 
+            "p_per_sample": 0.15
+            },
+        "lowres": {
+            "scale_factor": (0.45, 1),
+            "p_per_sample": 0.15,
+            },
+        "contrast": {
+            "contrast_range": (0.6, 1.55), 
+            "p_per_sample": 0.15
+            }, 
+        "brightness":{},
+        "gaussianblur":{
+            "blur_sigma": (0.5, 1.5), 
+            "p_per_sample": 0.1
+            }, 
+        "gaussian":{
+            "sigma":0.1, 
+            "p_gaussian":0.15},
+        "flip":True, 
+        }
+    
+    
+    train_data_setup_3d = {
+        "spatialtransform":{
+            "do_elastic_deform":True, 
+            "alpha":(0.,900.),
+            },
+       "normalize": {
+           "mode": "mean"
+           },
+       "ROI": {
+           "width": 192,
+           "height": 192,
+           "translation": 4
+           },
+       "gamma": {
+           "retain_stats":True, 
+           "gamma_range": (0.65, 1.55), 
+           "p_per_sample": 0.15
+           },
+       "lowres": {
+           "scale_factor": (0.45, 1),
+           "p_per_sample": 0.15,
+           },
+       "contrast": {
+           "contrast_range": (0.6, 1.55), 
+           "p_per_sample": 0.15
+           }, 
+       "brightness":{},
+       "gaussianblur":{
+           "blur_sigma": (0.5, 1.5), 
+           "p_per_sample": 0.1
+           }, 
+       "gaussian":{
+           "sigma":0.1, 
+           "p_gaussian":0.15},
+       "flip":False, 
+       }
+    
+    
+    val_data_setup = {
+        "normalize": {
+            "mode": "mean"
+            },
+        "ROI": {
+            "width": 192,
+            "height": 192,
             "translation": 0
             },
     }  
+
 
 
 

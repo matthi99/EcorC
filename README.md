@@ -13,7 +13,7 @@ Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (202
 
 1. Clone the git repository. 
 ```
-git clone https://github.com/matthi99/EcorC.git
+git clone https://git.uibk.ac.at/c7021123/EcorC.git
 ``` 
 
 2. Intall and activate the virtual environment.
@@ -26,19 +26,20 @@ conda activate env_lge
 # Usage
 
 ## Preprocessing
-1. Download the [EMIDEC Dataset](https://emidec.com/dataset#download). Make shure to download both train and test datasets and save them in a folder called `DATA/` 
+1. Download the [EMIDEC Dataset](https://emidec.com/dataset#download) and/or the [MyoPS Dataset](https://mega.nz/folder/BRdnDISQ#FnCg9ykPlTWYe5hrRZxi-w). If you downloaded both datasets the folder structure in your `DATA_FOLDER` should look like this 
 ``` 
-DATA/
+DATA_FOLDER/
 ├── emidec-dataset-1.0.1 
 ├── emidec-segmentation-testset-1.0.0
+├── MyoPS 2020 Dataset
 ```
-Note that for training the testset folder is optional and does not have to be present.
+Note that for training the emidec-segmentation-testset folder is optional and does not have to be present.
 
 2. Prepare the downloaded dataset for training. For this run the following command in your console
 ```
-python preprocessing.py 
+python preprocessing.py DATASET_NAME PATH_TO_DATA_FOLDER
 ``` 
-
+- `DATASET_NAME` specifies which datset should be preprocessed. Possible arguments are `EMIDEC` or `MyoPS`. 
 
 ## Training
 
@@ -46,26 +47,28 @@ python preprocessing.py
 
 To train the two dimensional U-Nets run the command
 ```
-python 2d-net.py --fold XXX 
+python 2d-net.py DATASET_NAME FOLD 
 ``` 
-- `--fold` specifies on which on which od the five folds (0,1,2,3,4) the network should be trained 
+- `FOLD` specifies on which on which od the five folds (0,1,2,3,4) the network should be trained.  
+- Trained networks and training progress will get saved in a folder called `RESULTS_FOLDER` located in the `DATA_FOLDER` directory. 
 
 ### 2D-3D cascade
 
-To train the Error correcting 2D-3D cascaded framewor run the command
+To train the Error correcting 2D-3D cascaded framework run the command
 ```
-python 3d-cascade.py --fold XXX
+python 3d-cascade.py DATASET_NAME FOLD 
 ``` 
 Note that to be able to train the cascade the 2D U-Net had to be trained beforehand. 
 
 ## Testing
 
-When both 2D and 3D cascade were trained on all folds you can test the final framework on the testset of the EMICED callenge. For this run 
+To test the final framework on the testsets of the correspond of the EMICED callenge run 
 ```
-python inference.py 
+python inference.py DATASET_NAME
 
-``` 
-Predictions and plots of the results will be saved in `RESULTS_FOLDER/testset`.
+```
+- Note that inference will be done with all 5 folds from the cross-validation as an ensemble. Thus, 2D and 3D cascade must have been trained on all 5 folds prior to running inference.   
+- Predictions and plots of the results will be saved in `RESULTS_FOLDER/DATASET_NAME/inference`.
 
 
 ## Authors and acknowledgment
