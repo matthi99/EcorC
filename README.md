@@ -13,7 +13,7 @@ Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (202
 
 1. Clone the git repository. 
 ```
-git clone https://git.uibk.ac.at/c7021123/EcorC.git
+git clone https://github.com/matthi99/EcorC.git
 ``` 
 
 2. Intall and activate the virtual environment.
