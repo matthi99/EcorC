@@ -6,7 +6,7 @@ Created on Wed Jan 25 11:24:17 2023
 """
 
 import torch
-from utils.utils_training import get_network, Histogram, save_checkpoint, get_logger, CascadeAugmentation
+from utils.utils_training import get_network, Histogram, save_checkpoint, get_logger, CascadeAugmentation, predict_cascade
 from dataloader import CardioDataset, CardioCollatorMulticlass
 from utils.metrics import get_metric
 from utils.losses import get_loss
@@ -27,7 +27,6 @@ parser.add_argument('--epochs', type=int, default=750)
 parser.add_argument('--batchnorm', type=bool, default=True)
 parser.add_argument('--start_filters', type=int, default=32)
 parser.add_argument('--activation', type=str, default="leakyrelu")
-parser.add_argument('--dropout', type=float, default=0.05)
 args = parser.parse_args()
 
 #define logger and device
@@ -60,7 +59,7 @@ config = {
         "metrics":["dice"],
     "network":{
         "activation": args.activation,
-        "dropout": args.dropout,
+        "dropout": plans["dropout3d"],
         "batchnorm": args.batchnorm,
         "start_filters": args.start_filters,
         "in_channels":plans["in_channels3d"],
@@ -150,19 +149,7 @@ for epoch in  range(args.epochs):
     steps = 0
     for im,mask in dataloader_eval:
         with torch.no_grad():
-            in2d=torch.moveaxis(im,2,0)
-            out2d=[]
-            for b in range(im.shape[0]):
-                with torch.no_grad():
-                    temp=net2d(in2d[:,b,...])[0]
-                temp=torch.moveaxis(temp,0,1)
-                temp=torch.argmax(temp,0).long()
-                temp=torch.nn.functional.one_hot(temp,len(plans["classes"]))
-                temp=torch.moveaxis(temp,-1,0)
-                out2d.append(temp[3:len(plans["classes"]),...])
-            out2d=torch.stack(out2d,0)
-            in3d=torch.cat((im,out2d),1)
-            out=net3d(in3d)[0]
+            out = predict_cascade(im, net2d, net3d, len(plans["classes"]))
             gt= torch.cat([mask[key].float() for key in mask.keys()],1)
             histogram.add_val_metrics(out,gt)
             steps += 1
@@ -176,7 +163,7 @@ for epoch in  range(args.epochs):
     val_metric=val_metric/len(plans["classes"][1:])
     if val_metric > best_metric:
         best_metric=val_metric
-        config["best_metric"]=best_metric
+        config["best_metric"]=float(best_metric)
         logger.info(f"New best Metric: Avg. = {best_metric}")
         histogram.print_hist(logger)
         save_checkpoint(net3d, savefolder, name = "best_weights")

@@ -6,6 +6,7 @@
 
 # Folders
 RESULTS_FOLDER/
+DATA_FOLDER/
 DATA/
 eval/
 paths/

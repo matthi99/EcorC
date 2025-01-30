@@ -1,0 +1,15 @@
+Case P008
+
+Gap between slices : 10 mm
+Sex : M
+Age : 45 
+Tobacco : 1
+Overweight : Y
+Arterial hypertension : N
+Diabetes : N
+Familial history of coronary artery disease: N
+ECG (ST +) : Y
+Troponin : 410
+Killip Max: 1
+FEVG : 50
+NTProBNP : 50

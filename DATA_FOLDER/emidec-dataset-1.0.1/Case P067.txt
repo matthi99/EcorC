@@ -1,0 +1,15 @@
+Case P067
+
+Gap between slices : 13 mm
+Sex : M
+Age : 58 
+Tobacco : 1
+Overweight : N
+Arterial hypertension : N
+Diabetes : N
+Familial history of coronary artery disease: N
+ECG (ST +) : Y
+Troponin : 140
+Killip Max: 1
+FEVG : 60
+NTProBNP : 50

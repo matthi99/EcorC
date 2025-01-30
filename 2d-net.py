@@ -7,7 +7,7 @@ Created on Wed Jan 25 09:22:44 2023
 
 import torch
 from utils.architectures import get_network
-from utils.utils_training import Histogram, save_checkpoint, get_logger
+from utils.utils_training import Histogram, save_checkpoint, get_logger, predict2d
 from dataloader import CardioDataset, CardioCollatorMulticlass
 from utils.metrics import get_metric
 from utils.losses import get_loss
@@ -16,6 +16,7 @@ import os
 import argparse
 import json
 import numpy as np
+
 
 
 #Define parameters for training 
@@ -59,7 +60,7 @@ config = {
         "metrics":["dice"],
     "network":{
         "activation": args.activation,
-        "dropout": args.dropout,
+        "dropout": float(args.dropout),
         "batchnorm": args.batchnorm,
         "start_filters": args.start_filters,
         "in_channels":1,
@@ -130,7 +131,8 @@ for epoch in range(args.epochs):
     for im,mask in dataloader_eval:
         with torch.no_grad():
             gt= torch.cat([mask[key].float() for key in mask.keys()],1)
-            out=net(im)[0]
+            out = predict2d(im, net)
+            #out=net(im)[0]
             histogram.add_val_metrics(out,gt)
             steps += 1
     histogram.scale_val(steps)
@@ -143,7 +145,7 @@ for epoch in range(args.epochs):
     val_metric=val_metric/len(plans["classes"][1:])
     if val_metric > best_metric:
         best_metric=val_metric
-        config["best_metric"]=best_metric
+        config["best_metric"]=float(best_metric)
         logger.info(f"New best Metric: Avg. = {best_metric}")
         histogram.print_hist(logger)
         save_checkpoint(net, savefolder, name = "best_weights")

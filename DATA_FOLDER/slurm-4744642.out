@@ -1,0 +1,1410 @@
+2025-01-28 15:02:15,175 [MainThread] INFO EMIDEC_cascade - Training on cuda:0
+2025-01-28 15:02:15,194 [MainThread] INFO EMIDEC_cascade - Training on fold 2 of nnunet data split
+2025-01-28 15:02:16,977 [MainThread] INFO EMIDEC_cascade - Epoch 0\750-------------------------------
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.1825319081544876
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - Loss = -0.18068222403526307
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.1329074203968048
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - blood dice = 0.20867641270160675
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.18146856129169464
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - scar dice = 0.13974273204803467
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.0017419483046978712
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.1825319230556488
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - blood dice = 0.26995334029197693
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.24480454623699188
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - scar dice = 0.21527588367462158
+2025-01-28 15:02:31,191 [MainThread] INFO EMIDEC_cascade - mvo dice = 9.389671322423965e-05
+2025-01-28 15:02:31,298 [MainThread] INFO EMIDEC_cascade - Epoch 1\750-------------------------------
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.22517478466033936
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - Loss = -0.25986183658242223
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.2203996181488037
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - blood dice = 0.2551054358482361
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.2532925009727478
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - scar dice = 0.37095335125923157
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.0022471952252089977
+2025-01-28 15:02:44,784 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:02:44,785 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.22517478466033936
+2025-01-28 15:02:44,785 [MainThread] INFO EMIDEC_cascade - blood dice = 0.28063422441482544
+2025-01-28 15:02:44,785 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.28425878286361694
+2025-01-28 15:02:44,785 [MainThread] INFO EMIDEC_cascade - scar dice = 0.33525407314300537
+2025-01-28 15:02:44,785 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.00055203668307513
+2025-01-28 15:02:44,875 [MainThread] INFO EMIDEC_cascade - Epoch 2\750-------------------------------
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.2817222774028778
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - Loss = -0.30700119882822036
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.26376354694366455
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - blood dice = 0.29555782675743103
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.29831013083457947
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - scar dice = 0.45377540588378906
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.007410687394440174
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.2817222774028778
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - blood dice = 0.3747026324272156
+2025-01-28 15:02:59,533 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.34739941358566284
+2025-01-28 15:02:59,535 [MainThread] INFO EMIDEC_cascade - scar dice = 0.4015924334526062
+2025-01-28 15:02:59,535 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.003194649238139391
+2025-01-28 15:02:59,616 [MainThread] INFO EMIDEC_cascade - Epoch 3\750-------------------------------
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.46299073100090027
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - Loss = -0.3819695428013802
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.3740120530128479
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - blood dice = 0.528697669506073
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.3943595290184021
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - scar dice = 0.5525585412979126
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.0204326082020998
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.4629907011985779
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - blood dice = 0.781078577041626
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.5094348192214966
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - scar dice = 0.5600003004074097
+2025-01-28 15:03:14,266 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.0014492754125967622
+2025-01-28 15:03:14,347 [MainThread] INFO EMIDEC_cascade - Epoch 4\750-------------------------------
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.6692707538604736
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - Loss = -0.45374580919742585
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.5575687885284424
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - blood dice = 0.7571529150009155
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.5527137517929077
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - scar dice = 0.6873244643211365
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.23308423161506653
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.6692706942558289
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8523833155632019
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.6695315837860107
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7139216661453247
+2025-01-28 15:03:29,192 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.44124656915664673
+2025-01-28 15:03:29,273 [MainThread] INFO EMIDEC_cascade - Epoch 5\750-------------------------------
+2025-01-28 15:03:41,068 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.6734575033187866
+2025-01-28 15:03:41,068 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:03:41,068 [MainThread] INFO EMIDEC_cascade - Loss = -0.5487576246261596
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.658750057220459
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8306819200515747
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.6455029249191284
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8073713183403015
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.35144415497779846
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.6734575033187866
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8732441067695618
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7049927115440369
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - scar dice = 0.6624865531921387
+2025-01-28 15:03:41,069 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.4531066417694092
+2025-01-28 15:03:41,155 [MainThread] INFO EMIDEC_cascade - Epoch 6\750-------------------------------
+2025-01-28 15:03:53,058 [MainThread] INFO EMIDEC_cascade - Epoch 7\750-------------------------------
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7641491889953613
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - Loss = -0.6443001359701157
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7150043249130249
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8851550221443176
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.706889271736145
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8009465932846069
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.46702608466148376
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7641491889953613
+2025-01-28 15:04:05,082 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8987516164779663
+2025-01-28 15:04:05,083 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7468789219856262
+2025-01-28 15:04:05,083 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7129782438278198
+2025-01-28 15:04:05,083 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.6979881525039673
+2025-01-28 15:04:05,165 [MainThread] INFO EMIDEC_cascade - Epoch 8\750-------------------------------
+2025-01-28 15:04:17,369 [MainThread] INFO EMIDEC_cascade - Epoch 9\750-------------------------------
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7762254476547241
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - Loss = -0.756097999215126
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7771092057228088
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - blood dice = 0.8979039192199707
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7194657921791077
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7778363227844238
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7132307291030884
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7762254476547241
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9164385795593262
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7599495649337769
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - scar dice = 0.6498972177505493
+2025-01-28 15:04:30,925 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7786163091659546
+2025-01-28 15:04:31,015 [MainThread] INFO EMIDEC_cascade - Epoch 10\750-------------------------------
+2025-01-28 15:04:43,289 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7791582345962524
+2025-01-28 15:04:43,289 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:04:43,289 [MainThread] INFO EMIDEC_cascade - Loss = -0.7695448279380799
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.789702296257019
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - blood dice = 0.890891432762146
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7283176779747009
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7811589241027832
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7584412097930908
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7791581749916077
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - blood dice = 0.912652850151062
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7628369927406311
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - scar dice = 0.658435046672821
+2025-01-28 15:04:43,290 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7827078104019165
+2025-01-28 15:04:43,379 [MainThread] INFO EMIDEC_cascade - Epoch 11\750-------------------------------
+2025-01-28 15:04:56,078 [MainThread] INFO EMIDEC_cascade - Epoch 12\750-------------------------------
+2025-01-28 15:05:08,195 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7897087335586548
+2025-01-28 15:05:08,195 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:05:08,195 [MainThread] INFO EMIDEC_cascade - Loss = -0.7728872418403625
+2025-01-28 15:05:08,195 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7908035516738892
+2025-01-28 15:05:08,195 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9107435345649719
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7515398859977722
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8022639155387878
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.698667049407959
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7897087931632996
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - blood dice = 0.914115309715271
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7610958218574524
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7080096006393433
+2025-01-28 15:05:08,196 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7756143808364868
+2025-01-28 15:05:08,281 [MainThread] INFO EMIDEC_cascade - Epoch 13\750-------------------------------
+2025-01-28 15:05:22,817 [MainThread] INFO EMIDEC_cascade - Epoch 14\750-------------------------------
+2025-01-28 15:05:35,889 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7941540479660034
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - Loss = -0.7845780968666076
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.798301637172699
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - blood dice = 0.910521388053894
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.753596305847168
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7762370109558105
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7528520822525024
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7941540479660034
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9182969927787781
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7720459699630737
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7121090292930603
+2025-01-28 15:05:35,890 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7741643190383911
+2025-01-28 15:05:35,972 [MainThread] INFO EMIDEC_cascade - Epoch 15\750-------------------------------
+2025-01-28 15:05:50,112 [MainThread] INFO EMIDEC_cascade - Epoch 16\750-------------------------------
+2025-01-28 15:06:03,224 [MainThread] INFO EMIDEC_cascade - Epoch 17\750-------------------------------
+2025-01-28 15:06:15,807 [MainThread] INFO EMIDEC_cascade - Epoch 18\750-------------------------------
+2025-01-28 15:06:29,665 [MainThread] INFO EMIDEC_cascade - Epoch 19\750-------------------------------
+2025-01-28 15:06:41,694 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7987123727798462
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - Loss = -0.8172387301921844
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.827377200126648
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - blood dice = 0.918012797832489
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7749210596084595
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8132271766662598
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8033484220504761
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7987123727798462
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9217435717582703
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7831127047538757
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7097586393356323
+2025-01-28 15:06:41,696 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7802344560623169
+2025-01-28 15:06:41,777 [MainThread] INFO EMIDEC_cascade - Epoch 20\750-------------------------------
+2025-01-28 15:06:56,083 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.7990930080413818
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - Loss = -0.807158425450325
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8135603070259094
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - blood dice = 0.921177089214325
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7806307077407837
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7670136094093323
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7854193449020386
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.7990929484367371
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9265263676643372
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7847025990486145
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7130271196365356
+2025-01-28 15:06:56,084 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7721158266067505
+2025-01-28 15:06:56,164 [MainThread] INFO EMIDEC_cascade - Epoch 21\750-------------------------------
+2025-01-28 15:07:09,593 [MainThread] INFO EMIDEC_cascade - Epoch 22\750-------------------------------
+2025-01-28 15:07:22,043 [MainThread] INFO EMIDEC_cascade - Epoch 23\750-------------------------------
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8020265698432922
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - Loss = -0.8303839534521102
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8366205096244812
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9293988347053528
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7895681262016296
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8175109624862671
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8100042343139648
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.802026629447937
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - blood dice = 0.931328296661377
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7844159603118896
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7131017446517944
+2025-01-28 15:07:36,020 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7792603969573975
+2025-01-28 15:07:36,105 [MainThread] INFO EMIDEC_cascade - Epoch 24\750-------------------------------
+2025-01-28 15:07:49,146 [MainThread] INFO EMIDEC_cascade - Epoch 25\750-------------------------------
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8061115741729736
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - Loss = -0.8398266345262527
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8371270895004272
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9285016059875488
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7936276197433472
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8088518977165222
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8175269961357117
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8061116337776184
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9334284067153931
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.797147274017334
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7144515514373779
+2025-01-28 15:08:01,847 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7794190645217896
+2025-01-28 15:08:01,931 [MainThread] INFO EMIDEC_cascade - Epoch 26\750-------------------------------
+2025-01-28 15:08:14,554 [MainThread] INFO EMIDEC_cascade - Epoch 27\750-------------------------------
+2025-01-28 15:08:26,452 [MainThread] INFO EMIDEC_cascade - Epoch 28\750-------------------------------
+2025-01-28 15:08:39,631 [MainThread] INFO EMIDEC_cascade - Epoch 29\750-------------------------------
+2025-01-28 15:08:52,312 [MainThread] INFO EMIDEC_cascade - Epoch 30\750-------------------------------
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8079670071601868
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - Loss = -0.8544554352760315
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8368039131164551
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9309768676757812
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8015696406364441
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - scar dice = 0.808659553527832
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8060095906257629
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8079670667648315
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9361221194267273
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8011474609375
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7168201208114624
+2025-01-28 15:09:05,273 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7777784466743469
+2025-01-28 15:09:05,352 [MainThread] INFO EMIDEC_cascade - Epoch 31\750-------------------------------
+2025-01-28 15:09:18,032 [MainThread] INFO EMIDEC_cascade - Epoch 32\750-------------------------------
+2025-01-28 15:09:30,191 [MainThread] INFO EMIDEC_cascade - Epoch 33\750-------------------------------
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8098065853118896
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - Loss = -0.8565221548080444
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8398529887199402
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9326750636100769
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.7966437339782715
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8068585395812988
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8232345581054688
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8098066449165344
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9353135228157043
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8046314120292664
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7132596969604492
+2025-01-28 15:09:42,261 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7860215902328491
+2025-01-28 15:09:42,357 [MainThread] INFO EMIDEC_cascade - Epoch 34\750-------------------------------
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8110936880111694
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - Loss = -0.8456625640392303
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8275238275527954
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9279072880744934
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8020427823066711
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7983611226081848
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7817840576171875
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8110936880111694
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9385162591934204
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8084131479263306
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7127452492713928
+2025-01-28 15:09:54,487 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7847000360488892
+2025-01-28 15:09:54,578 [MainThread] INFO EMIDEC_cascade - Epoch 35\750-------------------------------
+2025-01-28 15:10:07,355 [MainThread] INFO EMIDEC_cascade - Epoch 36\750-------------------------------
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8113107681274414
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - Loss = -0.8551893591880798
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8375360369682312
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - blood dice = 0.93207186460495
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8016376495361328
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - scar dice = 0.802040696144104
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8143939971923828
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:10:21,515 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.811310887336731
+2025-01-28 15:10:21,516 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9385272264480591
+2025-01-28 15:10:21,516 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8071126937866211
+2025-01-28 15:10:21,516 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7187968492507935
+2025-01-28 15:10:21,516 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.780806303024292
+2025-01-28 15:10:21,603 [MainThread] INFO EMIDEC_cascade - Epoch 37\750-------------------------------
+2025-01-28 15:10:33,829 [MainThread] INFO EMIDEC_cascade - Epoch 38\750-------------------------------
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8117420077323914
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - Loss = -0.8562228590250015
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8394442796707153
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9357672929763794
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8065884709358215
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - scar dice = 0.801415741443634
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8140056729316711
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8117420077323914
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9378102421760559
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.812209963798523
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - scar dice = 0.716022789478302
+2025-01-28 15:10:47,580 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7809250950813293
+2025-01-28 15:10:47,660 [MainThread] INFO EMIDEC_cascade - Epoch 39\750-------------------------------
+2025-01-28 15:11:00,368 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8124549984931946
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - Loss = -0.8499489456415177
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8332982063293457
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9337394833564758
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8082008361816406
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7921503782272339
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7991021275520325
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8124550580978394
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9386428594589233
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8072053790092468
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7199329137802124
+2025-01-28 15:11:00,371 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.784038782119751
+2025-01-28 15:11:00,451 [MainThread] INFO EMIDEC_cascade - Epoch 40\750-------------------------------
+2025-01-28 15:11:12,422 [MainThread] INFO EMIDEC_cascade - Epoch 41\750-------------------------------
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8141854405403137
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - Loss = -0.8614168405532837
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8437999486923218
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9356821179389954
+2025-01-28 15:11:24,526 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8162962198257446
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8163889050483704
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8068330883979797
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8141852617263794
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9395648241043091
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8134666681289673
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7181974649429321
+2025-01-28 15:11:24,527 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7855126857757568
+2025-01-28 15:11:24,613 [MainThread] INFO EMIDEC_cascade - Epoch 42\750-------------------------------
+2025-01-28 15:11:36,697 [MainThread] INFO EMIDEC_cascade - Epoch 43\750-------------------------------
+2025-01-28 15:11:48,011 [MainThread] INFO EMIDEC_cascade - Epoch 44\750-------------------------------
+2025-01-28 15:12:00,814 [MainThread] INFO EMIDEC_cascade - Epoch 45\750-------------------------------
+2025-01-28 15:12:12,578 [MainThread] INFO EMIDEC_cascade - Epoch 46\750-------------------------------
+2025-01-28 15:12:25,366 [MainThread] INFO EMIDEC_cascade - Epoch 47\750-------------------------------
+2025-01-28 15:12:38,937 [MainThread] INFO EMIDEC_cascade - Epoch 48\750-------------------------------
+2025-01-28 15:12:51,456 [MainThread] INFO EMIDEC_cascade - Epoch 49\750-------------------------------
+2025-01-28 15:13:03,443 [MainThread] INFO EMIDEC_cascade - Epoch 50\750-------------------------------
+2025-01-28 15:13:16,432 [MainThread] INFO EMIDEC_cascade - Epoch 51\750-------------------------------
+2025-01-28 15:13:28,826 [MainThread] INFO EMIDEC_cascade - Epoch 52\750-------------------------------
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8146171569824219
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - Loss = -0.8681966304779053
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8474096059799194
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9392787218093872
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8225582838058472
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8158434629440308
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8119579553604126
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8146170377731323
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9430230855941772
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8201931118965149
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7198259234428406
+2025-01-28 15:13:41,621 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7754265069961548
+2025-01-28 15:13:41,702 [MainThread] INFO EMIDEC_cascade - Epoch 53\750-------------------------------
+2025-01-28 15:13:54,229 [MainThread] INFO EMIDEC_cascade - Epoch 54\750-------------------------------
+2025-01-28 15:14:07,567 [MainThread] INFO EMIDEC_cascade - Epoch 55\750-------------------------------
+2025-01-28 15:14:21,411 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8161464929580688
+2025-01-28 15:14:21,411 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:14:21,411 [MainThread] INFO EMIDEC_cascade - Loss = -0.8628814101219178
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8446692228317261
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9398785829544067
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8225569725036621
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8142135739326477
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8020275235176086
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8161464929580688
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9445533752441406
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8167664408683777
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7168527841567993
+2025-01-28 15:14:21,412 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.786413311958313
+2025-01-28 15:14:21,496 [MainThread] INFO EMIDEC_cascade - Epoch 56\750-------------------------------
+2025-01-28 15:14:33,662 [MainThread] INFO EMIDEC_cascade - Epoch 57\750-------------------------------
+2025-01-28 15:14:45,183 [MainThread] INFO EMIDEC_cascade - Epoch 58\750-------------------------------
+2025-01-28 15:14:56,963 [MainThread] INFO EMIDEC_cascade - Epoch 59\750-------------------------------
+2025-01-28 15:15:09,555 [MainThread] INFO EMIDEC_cascade - Epoch 60\750-------------------------------
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.81644606590271
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - Loss = -0.8669965982437133
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8478805422782898
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9416114687919617
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8293421864509583
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - scar dice = 0.799111008644104
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8214572072029114
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8164461255073547
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9452446699142456
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.825705885887146
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7159404158592224
+2025-01-28 15:15:22,529 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7788931131362915
+2025-01-28 15:15:22,614 [MainThread] INFO EMIDEC_cascade - Epoch 61\750-------------------------------
+2025-01-28 15:15:34,717 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8176913857460022
+2025-01-28 15:15:34,717 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:15:34,717 [MainThread] INFO EMIDEC_cascade - Loss = -0.8832987010478973
+2025-01-28 15:15:34,717 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8649600744247437
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9451759457588196
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8361269235610962
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8223919868469238
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8561457395553589
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8176913261413574
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9454609751701355
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8263665437698364
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7191478610038757
+2025-01-28 15:15:34,718 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7797901630401611
+2025-01-28 15:15:34,798 [MainThread] INFO EMIDEC_cascade - Epoch 62\750-------------------------------
+2025-01-28 15:15:47,377 [MainThread] INFO EMIDEC_cascade - Epoch 63\750-------------------------------
+2025-01-28 15:16:02,347 [MainThread] INFO EMIDEC_cascade - Epoch 64\750-------------------------------
+2025-01-28 15:16:14,567 [MainThread] INFO EMIDEC_cascade - Epoch 65\750-------------------------------
+2025-01-28 15:16:27,651 [MainThread] INFO EMIDEC_cascade - Epoch 66\750-------------------------------
+2025-01-28 15:16:41,900 [MainThread] INFO EMIDEC_cascade - Epoch 67\750-------------------------------
+2025-01-28 15:16:53,341 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8192620277404785
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - Loss = -0.865772345662117
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8473547101020813
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9425230026245117
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8253000378608704
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8054336309432983
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8161617517471313
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8192620277404785
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9450995326042175
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8269664645195007
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7166601419448853
+2025-01-28 15:16:53,342 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7883220911026001
+2025-01-28 15:16:53,427 [MainThread] INFO EMIDEC_cascade - Epoch 68\750-------------------------------
+2025-01-28 15:17:05,413 [MainThread] INFO EMIDEC_cascade - Epoch 69\750-------------------------------
+2025-01-28 15:17:18,202 [MainThread] INFO EMIDEC_cascade - Epoch 70\750-------------------------------
+2025-01-28 15:17:30,838 [MainThread] INFO EMIDEC_cascade - Epoch 71\750-------------------------------
+2025-01-28 15:17:44,406 [MainThread] INFO EMIDEC_cascade - Epoch 72\750-------------------------------
+2025-01-28 15:17:56,901 [MainThread] INFO EMIDEC_cascade - Epoch 73\750-------------------------------
+2025-01-28 15:18:10,500 [MainThread] INFO EMIDEC_cascade - Epoch 74\750-------------------------------
+2025-01-28 15:18:23,895 [MainThread] INFO EMIDEC_cascade - Epoch 75\750-------------------------------
+2025-01-28 15:18:37,485 [MainThread] INFO EMIDEC_cascade - Epoch 76\750-------------------------------
+2025-01-28 15:18:50,526 [MainThread] INFO EMIDEC_cascade - Epoch 77\750-------------------------------
+2025-01-28 15:19:03,398 [MainThread] INFO EMIDEC_cascade - Epoch 78\750-------------------------------
+2025-01-28 15:19:17,053 [MainThread] INFO EMIDEC_cascade - Epoch 79\750-------------------------------
+2025-01-28 15:19:29,606 [MainThread] INFO EMIDEC_cascade - Epoch 80\750-------------------------------
+2025-01-28 15:19:42,919 [MainThread] INFO EMIDEC_cascade - Epoch 81\750-------------------------------
+2025-01-28 15:19:55,963 [MainThread] INFO EMIDEC_cascade - Epoch 82\750-------------------------------
+2025-01-28 15:20:08,733 [MainThread] INFO EMIDEC_cascade - Epoch 83\750-------------------------------
+2025-01-28 15:20:21,240 [MainThread] INFO EMIDEC_cascade - Epoch 84\750-------------------------------
+2025-01-28 15:20:34,655 [MainThread] INFO EMIDEC_cascade - Epoch 85\750-------------------------------
+2025-01-28 15:20:47,327 [MainThread] INFO EMIDEC_cascade - Epoch 86\750-------------------------------
+2025-01-28 15:21:00,369 [MainThread] INFO EMIDEC_cascade - Epoch 87\750-------------------------------
+2025-01-28 15:21:14,141 [MainThread] INFO EMIDEC_cascade - Epoch 88\750-------------------------------
+2025-01-28 15:21:26,456 [MainThread] INFO EMIDEC_cascade - Epoch 89\750-------------------------------
+2025-01-28 15:21:39,270 [MainThread] INFO EMIDEC_cascade - Epoch 90\750-------------------------------
+2025-01-28 15:21:52,405 [MainThread] INFO EMIDEC_cascade - Epoch 91\750-------------------------------
+2025-01-28 15:22:05,515 [MainThread] INFO EMIDEC_cascade - Epoch 92\750-------------------------------
+2025-01-28 15:22:18,374 [MainThread] INFO EMIDEC_cascade - Epoch 93\750-------------------------------
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8194359540939331
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - Loss = -0.8733669996261597
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8557186126708984
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - blood dice = 0.945684552192688
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8408387303352356
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8106803894042969
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8256710767745972
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8194359540939331
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - blood dice = 0.946192741394043
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8312894105911255
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7198055982589722
+2025-01-28 15:22:30,925 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7804561853408813
+2025-01-28 15:22:31,006 [MainThread] INFO EMIDEC_cascade - Epoch 94\750-------------------------------
+2025-01-28 15:22:44,463 [MainThread] INFO EMIDEC_cascade - Epoch 95\750-------------------------------
+2025-01-28 15:22:58,818 [MainThread] INFO EMIDEC_cascade - Epoch 96\750-------------------------------
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8195147514343262
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - Loss = -0.8728762626647949
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8507720828056335
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9457417726516724
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8437051773071289
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7939812541007996
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8196601867675781
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8195147514343262
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9459811449050903
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8315986394882202
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7173158526420593
+2025-01-28 15:23:13,438 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7831631898880005
+2025-01-28 15:23:13,522 [MainThread] INFO EMIDEC_cascade - Epoch 97\750-------------------------------
+2025-01-28 15:23:25,816 [MainThread] INFO EMIDEC_cascade - Epoch 98\750-------------------------------
+2025-01-28 15:23:40,182 [MainThread] INFO EMIDEC_cascade - Epoch 99\750-------------------------------
+2025-01-28 15:23:51,286 [MainThread] INFO EMIDEC_cascade - Epoch 100\750-------------------------------
+2025-01-28 15:24:03,576 [MainThread] INFO EMIDEC_cascade - Epoch 101\750-------------------------------
+2025-01-28 15:24:17,242 [MainThread] INFO EMIDEC_cascade - Epoch 102\750-------------------------------
+2025-01-28 15:24:30,022 [MainThread] INFO EMIDEC_cascade - Epoch 103\750-------------------------------
+2025-01-28 15:24:43,504 [MainThread] INFO EMIDEC_cascade - Epoch 104\750-------------------------------
+2025-01-28 15:24:56,971 [MainThread] INFO EMIDEC_cascade - Epoch 105\750-------------------------------
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8197072744369507
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - Loss = -0.8566354751586914
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8391157984733582
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9426431655883789
+2025-01-28 15:25:10,464 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8356868028640747
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7516483068466187
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8264854550361633
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8197072744369507
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9455448985099792
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8311974406242371
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - scar dice = 0.720038890838623
+2025-01-28 15:25:10,465 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7820478677749634
+2025-01-28 15:25:10,545 [MainThread] INFO EMIDEC_cascade - Epoch 106\750-------------------------------
+2025-01-28 15:25:25,755 [MainThread] INFO EMIDEC_cascade - Epoch 107\750-------------------------------
+2025-01-28 15:25:37,496 [MainThread] INFO EMIDEC_cascade - Epoch 108\750-------------------------------
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8198184967041016
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - Loss = -0.8391024559736252
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8181821703910828
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9425926208496094
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8364566564559937
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7135325074195862
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7801467776298523
+2025-01-28 15:25:49,592 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:25:49,593 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8198186159133911
+2025-01-28 15:25:49,593 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9464620351791382
+2025-01-28 15:25:49,593 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8319077491760254
+2025-01-28 15:25:49,593 [MainThread] INFO EMIDEC_cascade - scar dice = 0.715874969959259
+2025-01-28 15:25:49,593 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7850292921066284
+2025-01-28 15:25:49,691 [MainThread] INFO EMIDEC_cascade - Epoch 109\750-------------------------------
+2025-01-28 15:26:02,019 [MainThread] INFO EMIDEC_cascade - Epoch 110\750-------------------------------
+2025-01-28 15:26:13,748 [MainThread] INFO EMIDEC_cascade - Epoch 111\750-------------------------------
+2025-01-28 15:26:28,914 [MainThread] INFO EMIDEC_cascade - Epoch 112\750-------------------------------
+2025-01-28 15:26:39,774 [MainThread] INFO EMIDEC_cascade - Epoch 113\750-------------------------------
+2025-01-28 15:26:51,411 [MainThread] INFO EMIDEC_cascade - Epoch 114\750-------------------------------
+2025-01-28 15:27:04,378 [MainThread] INFO EMIDEC_cascade - Epoch 115\750-------------------------------
+2025-01-28 15:27:16,858 [MainThread] INFO EMIDEC_cascade - Epoch 116\750-------------------------------
+2025-01-28 15:27:29,823 [MainThread] INFO EMIDEC_cascade - Epoch 117\750-------------------------------
+2025-01-28 15:27:44,095 [MainThread] INFO EMIDEC_cascade - Epoch 118\750-------------------------------
+2025-01-28 15:27:56,353 [MainThread] INFO EMIDEC_cascade - Epoch 119\750-------------------------------
+2025-01-28 15:28:09,416 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8198978900909424
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - Loss = -0.8320143103599549
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8132338523864746
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9399650692939758
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8291897773742676
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - scar dice = 0.6864144802093506
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7973660230636597
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8198979496955872
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - blood dice = 0.947236180305481
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.829703152179718
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7186672687530518
+2025-01-28 15:28:09,417 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7839850187301636
+2025-01-28 15:28:09,516 [MainThread] INFO EMIDEC_cascade - Epoch 120\750-------------------------------
+2025-01-28 15:28:23,046 [MainThread] INFO EMIDEC_cascade - Epoch 121\750-------------------------------
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8204681873321533
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - Loss = -0.8415781855583191
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.820870041847229
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9404075741767883
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8307780027389526
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7395482063293457
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7727460265159607
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8204682469367981
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9469143748283386
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8325904011726379
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7181366682052612
+2025-01-28 15:28:36,298 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7842310667037964
+2025-01-28 15:28:36,384 [MainThread] INFO EMIDEC_cascade - Epoch 122\750-------------------------------
+2025-01-28 15:28:50,253 [MainThread] INFO EMIDEC_cascade - Epoch 123\750-------------------------------
+2025-01-28 15:29:03,904 [MainThread] INFO EMIDEC_cascade - Epoch 124\750-------------------------------
+2025-01-28 15:29:17,390 [MainThread] INFO EMIDEC_cascade - Epoch 125\750-------------------------------
+2025-01-28 15:29:29,725 [MainThread] INFO EMIDEC_cascade - Epoch 126\750-------------------------------
+2025-01-28 15:29:41,624 [MainThread] INFO EMIDEC_cascade - Epoch 127\750-------------------------------
+2025-01-28 15:29:53,950 [MainThread] INFO EMIDEC_cascade - Epoch 128\750-------------------------------
+2025-01-28 15:30:06,354 [MainThread] INFO EMIDEC_cascade - Epoch 129\750-------------------------------
+2025-01-28 15:30:20,630 [MainThread] INFO EMIDEC_cascade - Epoch 130\750-------------------------------
+2025-01-28 15:30:33,939 [MainThread] INFO EMIDEC_cascade - Epoch 131\750-------------------------------
+2025-01-28 15:30:47,493 [MainThread] INFO EMIDEC_cascade - Epoch 132\750-------------------------------
+2025-01-28 15:30:59,093 [MainThread] INFO EMIDEC_cascade - Epoch 133\750-------------------------------
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8214901685714722
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - Loss = -0.8423567980527877
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8211933970451355
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9434815645217896
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8358801007270813
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - scar dice = 0.738268256187439
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7671433687210083
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8214902877807617
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9471686482429504
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8340412974357605
+2025-01-28 15:31:12,840 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7210676670074463
+2025-01-28 15:31:12,841 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7836831212043762
+2025-01-28 15:31:12,929 [MainThread] INFO EMIDEC_cascade - Epoch 134\750-------------------------------
+2025-01-28 15:31:27,229 [MainThread] INFO EMIDEC_cascade - Epoch 135\750-------------------------------
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8223484754562378
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - Loss = -0.8346784144639969
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.815831184387207
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9427563548088074
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8357433080673218
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - scar dice = 0.6872953772544861
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7975297570228577
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8223484754562378
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9478727579116821
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8350096940994263
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7243505120277405
+2025-01-28 15:31:39,118 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7821611166000366
+2025-01-28 15:31:39,205 [MainThread] INFO EMIDEC_cascade - Epoch 136\750-------------------------------
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8225864171981812
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - Loss = -0.873413935303688
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8556153178215027
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9480301141738892
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8451309204101562
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - scar dice = 0.789851188659668
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8394489288330078
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8225864171981812
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9466909170150757
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8358667492866516
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7227590680122375
+2025-01-28 15:31:49,762 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7850289940834045
+2025-01-28 15:31:49,844 [MainThread] INFO EMIDEC_cascade - Epoch 137\750-------------------------------
+2025-01-28 15:32:03,144 [MainThread] INFO EMIDEC_cascade - Epoch 138\750-------------------------------
+2025-01-28 15:32:16,768 [MainThread] INFO EMIDEC_cascade - Epoch 139\750-------------------------------
+2025-01-28 15:32:30,666 [MainThread] INFO EMIDEC_cascade - Epoch 140\750-------------------------------
+2025-01-28 15:32:42,908 [MainThread] INFO EMIDEC_cascade - Epoch 141\750-------------------------------
+2025-01-28 15:32:56,799 [MainThread] INFO EMIDEC_cascade - Epoch 142\750-------------------------------
+2025-01-28 15:33:10,152 [MainThread] INFO EMIDEC_cascade - Epoch 143\750-------------------------------
+2025-01-28 15:33:20,887 [MainThread] INFO EMIDEC_cascade - Epoch 144\750-------------------------------
+2025-01-28 15:33:33,048 [MainThread] INFO EMIDEC_cascade - Epoch 145\750-------------------------------
+2025-01-28 15:33:44,985 [MainThread] INFO EMIDEC_cascade - Epoch 146\750-------------------------------
+2025-01-28 15:33:57,961 [MainThread] INFO EMIDEC_cascade - Epoch 147\750-------------------------------
+2025-01-28 15:34:11,010 [MainThread] INFO EMIDEC_cascade - Epoch 148\750-------------------------------
+2025-01-28 15:34:24,638 [MainThread] INFO EMIDEC_cascade - Epoch 149\750-------------------------------
+2025-01-28 15:34:38,460 [MainThread] INFO EMIDEC_cascade - Epoch 150\750-------------------------------
+2025-01-28 15:34:50,613 [MainThread] INFO EMIDEC_cascade - Epoch 151\750-------------------------------
+2025-01-28 15:35:03,941 [MainThread] INFO EMIDEC_cascade - Epoch 152\750-------------------------------
+2025-01-28 15:35:18,125 [MainThread] INFO EMIDEC_cascade - Epoch 153\750-------------------------------
+2025-01-28 15:35:31,733 [MainThread] INFO EMIDEC_cascade - Epoch 154\750-------------------------------
+2025-01-28 15:35:42,943 [MainThread] INFO EMIDEC_cascade - Epoch 155\750-------------------------------
+2025-01-28 15:35:53,819 [MainThread] INFO EMIDEC_cascade - Epoch 156\750-------------------------------
+2025-01-28 15:36:07,229 [MainThread] INFO EMIDEC_cascade - Epoch 157\750-------------------------------
+2025-01-28 15:36:18,993 [MainThread] INFO EMIDEC_cascade - Epoch 158\750-------------------------------
+2025-01-28 15:36:30,506 [MainThread] INFO EMIDEC_cascade - Epoch 159\750-------------------------------
+2025-01-28 15:36:43,511 [MainThread] INFO EMIDEC_cascade - Epoch 160\750-------------------------------
+2025-01-28 15:36:56,338 [MainThread] INFO EMIDEC_cascade - Epoch 161\750-------------------------------
+2025-01-28 15:37:09,677 [MainThread] INFO EMIDEC_cascade - Epoch 162\750-------------------------------
+2025-01-28 15:37:22,413 [MainThread] INFO EMIDEC_cascade - Epoch 163\750-------------------------------
+2025-01-28 15:37:36,213 [MainThread] INFO EMIDEC_cascade - Epoch 164\750-------------------------------
+2025-01-28 15:37:50,009 [MainThread] INFO EMIDEC_cascade - Epoch 165\750-------------------------------
+2025-01-28 15:38:04,403 [MainThread] INFO EMIDEC_cascade - Epoch 166\750-------------------------------
+2025-01-28 15:38:16,983 [MainThread] INFO EMIDEC_cascade - Epoch 167\750-------------------------------
+2025-01-28 15:38:30,855 [MainThread] INFO EMIDEC_cascade - Epoch 168\750-------------------------------
+2025-01-28 15:38:42,967 [MainThread] INFO EMIDEC_cascade - Epoch 169\750-------------------------------
+2025-01-28 15:38:56,420 [MainThread] INFO EMIDEC_cascade - Epoch 170\750-------------------------------
+2025-01-28 15:39:10,604 [MainThread] INFO EMIDEC_cascade - Epoch 171\750-------------------------------
+2025-01-28 15:39:24,884 [MainThread] INFO EMIDEC_cascade - Epoch 172\750-------------------------------
+2025-01-28 15:39:39,005 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8227858543395996
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - Loss = -0.856656938791275
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.83771151304245
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9432598352432251
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8386667966842651
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7658279538154602
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8030910491943359
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8227858543395996
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9467174410820007
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8329359292984009
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7238068580627441
+2025-01-28 15:39:39,006 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7876831889152527
+2025-01-28 15:39:39,096 [MainThread] INFO EMIDEC_cascade - Epoch 173\750-------------------------------
+2025-01-28 15:39:51,939 [MainThread] INFO EMIDEC_cascade - Epoch 174\750-------------------------------
+2025-01-28 15:40:03,959 [MainThread] INFO EMIDEC_cascade - Epoch 175\750-------------------------------
+2025-01-28 15:40:17,758 [MainThread] INFO EMIDEC_cascade - Epoch 176\750-------------------------------
+2025-01-28 15:40:31,516 [MainThread] INFO EMIDEC_cascade - Epoch 177\750-------------------------------
+2025-01-28 15:40:43,101 [MainThread] INFO EMIDEC_cascade - Epoch 178\750-------------------------------
+2025-01-28 15:40:55,201 [MainThread] INFO EMIDEC_cascade - Epoch 179\750-------------------------------
+2025-01-28 15:41:08,748 [MainThread] INFO EMIDEC_cascade - Epoch 180\750-------------------------------
+2025-01-28 15:41:21,084 [MainThread] INFO EMIDEC_cascade - Epoch 181\750-------------------------------
+2025-01-28 15:41:33,286 [MainThread] INFO EMIDEC_cascade - Epoch 182\750-------------------------------
+2025-01-28 15:41:46,096 [MainThread] INFO EMIDEC_cascade - Epoch 183\750-------------------------------
+2025-01-28 15:41:58,549 [MainThread] INFO EMIDEC_cascade - Epoch 184\750-------------------------------
+2025-01-28 15:42:12,577 [MainThread] INFO EMIDEC_cascade - Epoch 185\750-------------------------------
+2025-01-28 15:42:27,556 [MainThread] INFO EMIDEC_cascade - Epoch 186\750-------------------------------
+2025-01-28 15:42:40,618 [MainThread] INFO EMIDEC_cascade - Epoch 187\750-------------------------------
+2025-01-28 15:42:54,354 [MainThread] INFO EMIDEC_cascade - Epoch 188\750-------------------------------
+2025-01-28 15:43:07,299 [MainThread] INFO EMIDEC_cascade - Epoch 189\750-------------------------------
+2025-01-28 15:43:20,078 [MainThread] INFO EMIDEC_cascade - Epoch 190\750-------------------------------
+2025-01-28 15:43:35,171 [MainThread] INFO EMIDEC_cascade - Epoch 191\750-------------------------------
+2025-01-28 15:43:47,069 [MainThread] INFO EMIDEC_cascade - Epoch 192\750-------------------------------
+2025-01-28 15:44:00,592 [MainThread] INFO EMIDEC_cascade - Epoch 193\750-------------------------------
+2025-01-28 15:44:14,490 [MainThread] INFO EMIDEC_cascade - Epoch 194\750-------------------------------
+2025-01-28 15:44:29,380 [MainThread] INFO EMIDEC_cascade - Epoch 195\750-------------------------------
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8233317136764526
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - Loss = -0.8509980380535126
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8321131467819214
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9432429075241089
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8385545611381531
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7511522173881531
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.795502781867981
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8233316540718079
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9485794305801392
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.836197555065155
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7259272933006287
+2025-01-28 15:44:40,318 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7826224565505981
+2025-01-28 15:44:40,409 [MainThread] INFO EMIDEC_cascade - Epoch 196\750-------------------------------
+2025-01-28 15:44:53,822 [MainThread] INFO EMIDEC_cascade - Epoch 197\750-------------------------------
+2025-01-28 15:45:07,663 [MainThread] INFO EMIDEC_cascade - Epoch 198\750-------------------------------
+2025-01-28 15:45:20,468 [MainThread] INFO EMIDEC_cascade - Epoch 199\750-------------------------------
+2025-01-28 15:45:34,135 [MainThread] INFO EMIDEC_cascade - Epoch 200\750-------------------------------
+2025-01-28 15:45:49,030 [MainThread] INFO EMIDEC_cascade - Epoch 201\750-------------------------------
+2025-01-28 15:46:02,685 [MainThread] INFO EMIDEC_cascade - Epoch 202\750-------------------------------
+2025-01-28 15:46:17,671 [MainThread] INFO EMIDEC_cascade - Epoch 203\750-------------------------------
+2025-01-28 15:46:32,099 [MainThread] INFO EMIDEC_cascade - Epoch 204\750-------------------------------
+2025-01-28 15:46:46,030 [MainThread] INFO EMIDEC_cascade - Epoch 205\750-------------------------------
+2025-01-28 15:46:57,569 [MainThread] INFO EMIDEC_cascade - Epoch 206\750-------------------------------
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8233717679977417
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - Loss = -0.8571367233991622
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.835491955280304
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9419852495193481
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8368865251541138
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7432557344436646
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8198406100273132
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8233717083930969
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9442650675773621
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.835019588470459
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7246243953704834
+2025-01-28 15:47:11,905 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7895780801773071
+2025-01-28 15:47:11,994 [MainThread] INFO EMIDEC_cascade - Epoch 207\750-------------------------------
+2025-01-28 15:47:24,477 [MainThread] INFO EMIDEC_cascade - Epoch 208\750-------------------------------
+2025-01-28 15:47:36,294 [MainThread] INFO EMIDEC_cascade - Epoch 209\750-------------------------------
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8254188299179077
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - Loss = -0.8668239146471024
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8498008847236633
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9424450993537903
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8378630876541138
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7689498662948608
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8499453663825989
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8254187703132629
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9449785947799683
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8376815915107727
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7305785417556763
+2025-01-28 15:47:50,076 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7884364128112793
+2025-01-28 15:47:50,168 [MainThread] INFO EMIDEC_cascade - Epoch 210\750-------------------------------
+2025-01-28 15:48:01,943 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8262310028076172
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - Loss = -0.8510513246059418
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8315434455871582
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9401466250419617
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8368262052536011
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7422463893890381
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8069543838500977
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8262310028076172
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9443044662475586
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8345280885696411
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7305513024330139
+2025-01-28 15:48:01,944 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7955400347709656
+2025-01-28 15:48:02,035 [MainThread] INFO EMIDEC_cascade - Epoch 211\750-------------------------------
+2025-01-28 15:48:13,720 [MainThread] INFO EMIDEC_cascade - Epoch 212\750-------------------------------
+2025-01-28 15:48:26,420 [MainThread] INFO EMIDEC_cascade - Epoch 213\750-------------------------------
+2025-01-28 15:48:39,900 [MainThread] INFO EMIDEC_cascade - Epoch 214\750-------------------------------
+2025-01-28 15:48:53,340 [MainThread] INFO EMIDEC_cascade - Epoch 215\750-------------------------------
+2025-01-28 15:49:05,319 [MainThread] INFO EMIDEC_cascade - Epoch 216\750-------------------------------
+2025-01-28 15:49:18,692 [MainThread] INFO EMIDEC_cascade - Epoch 217\750-------------------------------
+2025-01-28 15:49:33,027 [MainThread] INFO EMIDEC_cascade - Epoch 218\750-------------------------------
+2025-01-28 15:49:44,057 [MainThread] INFO EMIDEC_cascade - Epoch 219\750-------------------------------
+2025-01-28 15:49:56,914 [MainThread] INFO EMIDEC_cascade - Epoch 220\750-------------------------------
+2025-01-28 15:50:11,835 [MainThread] INFO EMIDEC_cascade - Epoch 221\750-------------------------------
+2025-01-28 15:50:25,249 [MainThread] INFO EMIDEC_cascade - Epoch 222\750-------------------------------
+2025-01-28 15:50:38,392 [MainThread] INFO EMIDEC_cascade - Epoch 223\750-------------------------------
+2025-01-28 15:50:51,310 [MainThread] INFO EMIDEC_cascade - Epoch 224\750-------------------------------
+2025-01-28 15:51:04,523 [MainThread] INFO EMIDEC_cascade - Epoch 225\750-------------------------------
+2025-01-28 15:51:18,208 [MainThread] INFO EMIDEC_cascade - Epoch 226\750-------------------------------
+2025-01-28 15:51:32,453 [MainThread] INFO EMIDEC_cascade - Epoch 227\750-------------------------------
+2025-01-28 15:51:45,071 [MainThread] INFO EMIDEC_cascade - Epoch 228\750-------------------------------
+2025-01-28 15:51:56,573 [MainThread] INFO EMIDEC_cascade - Epoch 229\750-------------------------------
+2025-01-28 15:52:08,680 [MainThread] INFO EMIDEC_cascade - Epoch 230\750-------------------------------
+2025-01-28 15:52:22,312 [MainThread] INFO EMIDEC_cascade - Epoch 231\750-------------------------------
+2025-01-28 15:52:33,676 [MainThread] INFO EMIDEC_cascade - Epoch 232\750-------------------------------
+2025-01-28 15:52:46,587 [MainThread] INFO EMIDEC_cascade - Epoch 233\750-------------------------------
+2025-01-28 15:52:59,185 [MainThread] INFO EMIDEC_cascade - Epoch 234\750-------------------------------
+2025-01-28 15:53:12,859 [MainThread] INFO EMIDEC_cascade - Epoch 235\750-------------------------------
+2025-01-28 15:53:26,380 [MainThread] INFO EMIDEC_cascade - Epoch 236\750-------------------------------
+2025-01-28 15:53:38,925 [MainThread] INFO EMIDEC_cascade - Epoch 237\750-------------------------------
+2025-01-28 15:53:53,194 [MainThread] INFO EMIDEC_cascade - Epoch 238\750-------------------------------
+2025-01-28 15:54:06,640 [MainThread] INFO EMIDEC_cascade - Epoch 239\750-------------------------------
+2025-01-28 15:54:18,631 [MainThread] INFO EMIDEC_cascade - Epoch 240\750-------------------------------
+2025-01-28 15:54:31,480 [MainThread] INFO EMIDEC_cascade - Epoch 241\750-------------------------------
+2025-01-28 15:54:43,888 [MainThread] INFO EMIDEC_cascade - Epoch 242\750-------------------------------
+2025-01-28 15:54:55,520 [MainThread] INFO EMIDEC_cascade - Epoch 243\750-------------------------------
+2025-01-28 15:55:08,555 [MainThread] INFO EMIDEC_cascade - Epoch 244\750-------------------------------
+2025-01-28 15:55:22,254 [MainThread] INFO EMIDEC_cascade - Epoch 245\750-------------------------------
+2025-01-28 15:55:35,519 [MainThread] INFO EMIDEC_cascade - Epoch 246\750-------------------------------
+2025-01-28 15:55:50,266 [MainThread] INFO EMIDEC_cascade - Epoch 247\750-------------------------------
+2025-01-28 15:56:04,088 [MainThread] INFO EMIDEC_cascade - Epoch 248\750-------------------------------
+2025-01-28 15:56:15,970 [MainThread] INFO EMIDEC_cascade - Epoch 249\750-------------------------------
+2025-01-28 15:56:30,064 [MainThread] INFO EMIDEC_cascade - Epoch 250\750-------------------------------
+2025-01-28 15:56:41,857 [MainThread] INFO EMIDEC_cascade - Epoch 251\750-------------------------------
+2025-01-28 15:56:55,941 [MainThread] INFO EMIDEC_cascade - Epoch 252\750-------------------------------
+2025-01-28 15:57:07,663 [MainThread] INFO EMIDEC_cascade - Epoch 253\750-------------------------------
+2025-01-28 15:57:18,216 [MainThread] INFO EMIDEC_cascade - Epoch 254\750-------------------------------
+2025-01-28 15:57:32,491 [MainThread] INFO EMIDEC_cascade - Epoch 255\750-------------------------------
+2025-01-28 15:57:45,346 [MainThread] INFO EMIDEC_cascade - Epoch 256\750-------------------------------
+2025-01-28 15:57:57,653 [MainThread] INFO EMIDEC_cascade - Epoch 257\750-------------------------------
+2025-01-28 15:58:10,367 [MainThread] INFO EMIDEC_cascade - Epoch 258\750-------------------------------
+2025-01-28 15:58:21,601 [MainThread] INFO EMIDEC_cascade - Epoch 259\750-------------------------------
+2025-01-28 15:58:34,182 [MainThread] INFO EMIDEC_cascade - Epoch 260\750-------------------------------
+2025-01-28 15:58:48,713 [MainThread] INFO EMIDEC_cascade - Epoch 261\750-------------------------------
+2025-01-28 15:59:02,040 [MainThread] INFO EMIDEC_cascade - Epoch 262\750-------------------------------
+2025-01-28 15:59:15,521 [MainThread] INFO EMIDEC_cascade - Epoch 263\750-------------------------------
+2025-01-28 15:59:27,093 [MainThread] INFO EMIDEC_cascade - Epoch 264\750-------------------------------
+2025-01-28 15:59:40,110 [MainThread] INFO EMIDEC_cascade - Epoch 265\750-------------------------------
+2025-01-28 15:59:53,300 [MainThread] INFO EMIDEC_cascade - Epoch 266\750-------------------------------
+2025-01-28 16:00:07,744 [MainThread] INFO EMIDEC_cascade - Epoch 267\750-------------------------------
+2025-01-28 16:00:19,729 [MainThread] INFO EMIDEC_cascade - Epoch 268\750-------------------------------
+2025-01-28 16:00:31,613 [MainThread] INFO EMIDEC_cascade - Epoch 269\750-------------------------------
+2025-01-28 16:00:44,584 [MainThread] INFO EMIDEC_cascade - Epoch 270\750-------------------------------
+2025-01-28 16:00:58,006 [MainThread] INFO EMIDEC_cascade - Epoch 271\750-------------------------------
+2025-01-28 16:01:11,225 [MainThread] INFO EMIDEC_cascade - Epoch 272\750-------------------------------
+2025-01-28 16:01:25,053 [MainThread] INFO EMIDEC_cascade - Epoch 273\750-------------------------------
+2025-01-28 16:01:39,357 [MainThread] INFO EMIDEC_cascade - Epoch 274\750-------------------------------
+2025-01-28 16:01:52,355 [MainThread] INFO EMIDEC_cascade - Epoch 275\750-------------------------------
+2025-01-28 16:02:06,122 [MainThread] INFO EMIDEC_cascade - Epoch 276\750-------------------------------
+2025-01-28 16:02:18,525 [MainThread] INFO EMIDEC_cascade - Epoch 277\750-------------------------------
+2025-01-28 16:02:31,521 [MainThread] INFO EMIDEC_cascade - Epoch 278\750-------------------------------
+2025-01-28 16:02:44,828 [MainThread] INFO EMIDEC_cascade - Epoch 279\750-------------------------------
+2025-01-28 16:02:58,128 [MainThread] INFO EMIDEC_cascade - Epoch 280\750-------------------------------
+2025-01-28 16:03:10,251 [MainThread] INFO EMIDEC_cascade - Epoch 281\750-------------------------------
+2025-01-28 16:03:22,850 [MainThread] INFO EMIDEC_cascade - Epoch 282\750-------------------------------
+2025-01-28 16:03:35,408 [MainThread] INFO EMIDEC_cascade - Epoch 283\750-------------------------------
+2025-01-28 16:03:49,272 [MainThread] INFO EMIDEC_cascade - Epoch 284\750-------------------------------
+2025-01-28 16:04:03,210 [MainThread] INFO EMIDEC_cascade - Epoch 285\750-------------------------------
+2025-01-28 16:04:13,089 [MainThread] INFO EMIDEC_cascade - Epoch 286\750-------------------------------
+2025-01-28 16:04:26,941 [MainThread] INFO EMIDEC_cascade - Epoch 287\750-------------------------------
+2025-01-28 16:04:39,413 [MainThread] INFO EMIDEC_cascade - Epoch 288\750-------------------------------
+2025-01-28 16:04:51,792 [MainThread] INFO EMIDEC_cascade - Epoch 289\750-------------------------------
+2025-01-28 16:05:06,142 [MainThread] INFO EMIDEC_cascade - Epoch 290\750-------------------------------
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8263587951660156
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - Loss = -0.8605714917182923
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8426475524902344
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9444878697395325
+2025-01-28 16:05:18,660 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8400388956069946
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8034100532531738
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7826536893844604
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8263587951660156
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9461408853530884
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8438448905944824
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7280413508415222
+2025-01-28 16:05:18,661 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.787408173084259
+2025-01-28 16:05:18,746 [MainThread] INFO EMIDEC_cascade - Epoch 291\750-------------------------------
+2025-01-28 16:05:32,833 [MainThread] INFO EMIDEC_cascade - Epoch 292\750-------------------------------
+2025-01-28 16:05:44,889 [MainThread] INFO EMIDEC_cascade - Epoch 293\750-------------------------------
+2025-01-28 16:05:58,651 [MainThread] INFO EMIDEC_cascade - Epoch 294\750-------------------------------
+2025-01-28 16:06:11,589 [MainThread] INFO EMIDEC_cascade - Epoch 295\750-------------------------------
+2025-01-28 16:06:25,287 [MainThread] INFO EMIDEC_cascade - Epoch 296\750-------------------------------
+2025-01-28 16:06:39,121 [MainThread] INFO EMIDEC_cascade - Epoch 297\750-------------------------------
+2025-01-28 16:06:54,087 [MainThread] INFO EMIDEC_cascade - Epoch 298\750-------------------------------
+2025-01-28 16:07:06,490 [MainThread] INFO EMIDEC_cascade - Epoch 299\750-------------------------------
+2025-01-28 16:07:19,342 [MainThread] INFO EMIDEC_cascade - Epoch 300\750-------------------------------
+2025-01-28 16:07:33,033 [MainThread] INFO EMIDEC_cascade - Epoch 301\750-------------------------------
+2025-01-28 16:07:46,224 [MainThread] INFO EMIDEC_cascade - Epoch 302\750-------------------------------
+2025-01-28 16:07:58,836 [MainThread] INFO EMIDEC_cascade - Epoch 303\750-------------------------------
+2025-01-28 16:08:10,486 [MainThread] INFO EMIDEC_cascade - Epoch 304\750-------------------------------
+2025-01-28 16:08:24,407 [MainThread] INFO EMIDEC_cascade - Epoch 305\750-------------------------------
+2025-01-28 16:08:37,796 [MainThread] INFO EMIDEC_cascade - Epoch 306\750-------------------------------
+2025-01-28 16:08:50,913 [MainThread] INFO EMIDEC_cascade - Epoch 307\750-------------------------------
+2025-01-28 16:09:03,767 [MainThread] INFO EMIDEC_cascade - Epoch 308\750-------------------------------
+2025-01-28 16:09:19,046 [MainThread] INFO EMIDEC_cascade - Epoch 309\750-------------------------------
+2025-01-28 16:09:32,074 [MainThread] INFO EMIDEC_cascade - Epoch 310\750-------------------------------
+2025-01-28 16:09:45,599 [MainThread] INFO EMIDEC_cascade - Epoch 311\750-------------------------------
+2025-01-28 16:09:59,061 [MainThread] INFO EMIDEC_cascade - Epoch 312\750-------------------------------
+2025-01-28 16:10:11,834 [MainThread] INFO EMIDEC_cascade - Epoch 313\750-------------------------------
+2025-01-28 16:10:26,003 [MainThread] INFO EMIDEC_cascade - Epoch 314\750-------------------------------
+2025-01-28 16:10:38,828 [MainThread] INFO EMIDEC_cascade - Epoch 315\750-------------------------------
+2025-01-28 16:10:51,364 [MainThread] INFO EMIDEC_cascade - Epoch 316\750-------------------------------
+2025-01-28 16:11:03,652 [MainThread] INFO EMIDEC_cascade - Epoch 317\750-------------------------------
+2025-01-28 16:11:16,663 [MainThread] INFO EMIDEC_cascade - Epoch 318\750-------------------------------
+2025-01-28 16:11:29,160 [MainThread] INFO EMIDEC_cascade - Epoch 319\750-------------------------------
+2025-01-28 16:11:42,062 [MainThread] INFO EMIDEC_cascade - Epoch 320\750-------------------------------
+2025-01-28 16:11:55,909 [MainThread] INFO EMIDEC_cascade - Epoch 321\750-------------------------------
+2025-01-28 16:12:09,107 [MainThread] INFO EMIDEC_cascade - Epoch 322\750-------------------------------
+2025-01-28 16:12:22,531 [MainThread] INFO EMIDEC_cascade - Epoch 323\750-------------------------------
+2025-01-28 16:12:35,237 [MainThread] INFO EMIDEC_cascade - Epoch 324\750-------------------------------
+2025-01-28 16:12:49,148 [MainThread] INFO EMIDEC_cascade - Epoch 325\750-------------------------------
+2025-01-28 16:13:02,741 [MainThread] INFO EMIDEC_cascade - Epoch 326\750-------------------------------
+2025-01-28 16:13:16,259 [MainThread] INFO EMIDEC_cascade - Epoch 327\750-------------------------------
+2025-01-28 16:13:30,357 [MainThread] INFO EMIDEC_cascade - Epoch 328\750-------------------------------
+2025-01-28 16:13:43,635 [MainThread] INFO EMIDEC_cascade - Epoch 329\750-------------------------------
+2025-01-28 16:13:55,768 [MainThread] INFO EMIDEC_cascade - Epoch 330\750-------------------------------
+2025-01-28 16:14:07,744 [MainThread] INFO EMIDEC_cascade - Epoch 331\750-------------------------------
+2025-01-28 16:14:20,997 [MainThread] INFO EMIDEC_cascade - Epoch 332\750-------------------------------
+2025-01-28 16:14:34,002 [MainThread] INFO EMIDEC_cascade - Epoch 333\750-------------------------------
+2025-01-28 16:14:47,326 [MainThread] INFO EMIDEC_cascade - Epoch 334\750-------------------------------
+2025-01-28 16:15:03,607 [MainThread] INFO EMIDEC_cascade - Epoch 335\750-------------------------------
+2025-01-28 16:15:16,886 [MainThread] INFO EMIDEC_cascade - Epoch 336\750-------------------------------
+2025-01-28 16:15:32,029 [MainThread] INFO EMIDEC_cascade - Epoch 337\750-------------------------------
+2025-01-28 16:15:44,537 [MainThread] INFO EMIDEC_cascade - Epoch 338\750-------------------------------
+2025-01-28 16:15:59,553 [MainThread] INFO EMIDEC_cascade - Epoch 339\750-------------------------------
+2025-01-28 16:16:12,860 [MainThread] INFO EMIDEC_cascade - Epoch 340\750-------------------------------
+2025-01-28 16:16:27,330 [MainThread] INFO EMIDEC_cascade - Epoch 341\750-------------------------------
+2025-01-28 16:16:39,795 [MainThread] INFO EMIDEC_cascade - Epoch 342\750-------------------------------
+2025-01-28 16:16:51,950 [MainThread] INFO EMIDEC_cascade - Epoch 343\750-------------------------------
+2025-01-28 16:17:03,385 [MainThread] INFO EMIDEC_cascade - Epoch 344\750-------------------------------
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.82669597864151
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - Loss = -0.8574236929416656
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8368195295333862
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9487112164497375
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8481336832046509
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7821502089500427
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7682830095291138
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8266960382461548
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9485438466072083
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8453397750854492
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7250092625617981
+2025-01-28 16:17:14,904 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7878910899162292
+2025-01-28 16:17:14,987 [MainThread] INFO EMIDEC_cascade - Epoch 345\750-------------------------------
+2025-01-28 16:17:27,299 [MainThread] INFO EMIDEC_cascade - Epoch 346\750-------------------------------
+2025-01-28 16:17:42,617 [MainThread] INFO EMIDEC_cascade - Epoch 347\750-------------------------------
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8275346755981445
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - Loss = -0.8568123579025269
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8374767303466797
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9473987817764282
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8504379391670227
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7500783205032349
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.80199134349823
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8275347948074341
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9480406045913696
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8425276875495911
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7265258431434631
+2025-01-28 16:17:55,119 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7930446267127991
+2025-01-28 16:17:55,201 [MainThread] INFO EMIDEC_cascade - Epoch 348\750-------------------------------
+2025-01-28 16:18:08,389 [MainThread] INFO EMIDEC_cascade - Epoch 349\750-------------------------------
+2025-01-28 16:18:22,445 [MainThread] INFO EMIDEC_cascade - Epoch 350\750-------------------------------
+2025-01-28 16:18:35,168 [MainThread] INFO EMIDEC_cascade - Epoch 351\750-------------------------------
+2025-01-28 16:18:48,275 [MainThread] INFO EMIDEC_cascade - Epoch 352\750-------------------------------
+2025-01-28 16:19:01,460 [MainThread] INFO EMIDEC_cascade - Epoch 353\750-------------------------------
+2025-01-28 16:19:14,615 [MainThread] INFO EMIDEC_cascade - Epoch 354\750-------------------------------
+2025-01-28 16:19:26,426 [MainThread] INFO EMIDEC_cascade - Epoch 355\750-------------------------------
+2025-01-28 16:19:39,139 [MainThread] INFO EMIDEC_cascade - Epoch 356\750-------------------------------
+2025-01-28 16:19:51,769 [MainThread] INFO EMIDEC_cascade - Epoch 357\750-------------------------------
+2025-01-28 16:20:05,096 [MainThread] INFO EMIDEC_cascade - Epoch 358\750-------------------------------
+2025-01-28 16:20:17,888 [MainThread] INFO EMIDEC_cascade - Epoch 359\750-------------------------------
+2025-01-28 16:20:29,994 [MainThread] INFO EMIDEC_cascade - Epoch 360\750-------------------------------
+2025-01-28 16:20:43,692 [MainThread] INFO EMIDEC_cascade - Epoch 361\750-------------------------------
+2025-01-28 16:20:57,125 [MainThread] INFO EMIDEC_cascade - Epoch 362\750-------------------------------
+2025-01-28 16:21:09,127 [MainThread] INFO EMIDEC_cascade - Epoch 363\750-------------------------------
+2025-01-28 16:21:22,540 [MainThread] INFO EMIDEC_cascade - Epoch 364\750-------------------------------
+2025-01-28 16:21:36,519 [MainThread] INFO EMIDEC_cascade - Epoch 365\750-------------------------------
+2025-01-28 16:21:48,471 [MainThread] INFO EMIDEC_cascade - Epoch 366\750-------------------------------
+2025-01-28 16:22:03,568 [MainThread] INFO EMIDEC_cascade - Epoch 367\750-------------------------------
+2025-01-28 16:22:16,094 [MainThread] INFO EMIDEC_cascade - Epoch 368\750-------------------------------
+2025-01-28 16:22:28,943 [MainThread] INFO EMIDEC_cascade - Epoch 369\750-------------------------------
+2025-01-28 16:22:40,782 [MainThread] INFO EMIDEC_cascade - Epoch 370\750-------------------------------
+2025-01-28 16:22:51,864 [MainThread] INFO EMIDEC_cascade - Epoch 371\750-------------------------------
+2025-01-28 16:23:06,145 [MainThread] INFO EMIDEC_cascade - Epoch 372\750-------------------------------
+2025-01-28 16:23:19,094 [MainThread] INFO EMIDEC_cascade - Epoch 373\750-------------------------------
+2025-01-28 16:23:32,387 [MainThread] INFO EMIDEC_cascade - Epoch 374\750-------------------------------
+2025-01-28 16:23:45,507 [MainThread] INFO EMIDEC_cascade - Epoch 375\750-------------------------------
+2025-01-28 16:23:58,883 [MainThread] INFO EMIDEC_cascade - Epoch 376\750-------------------------------
+2025-01-28 16:24:12,573 [MainThread] INFO EMIDEC_cascade - Epoch 377\750-------------------------------
+2025-01-28 16:24:25,964 [MainThread] INFO EMIDEC_cascade - Epoch 378\750-------------------------------
+2025-01-28 16:24:38,009 [MainThread] INFO EMIDEC_cascade - Epoch 379\750-------------------------------
+2025-01-28 16:24:50,376 [MainThread] INFO EMIDEC_cascade - Epoch 380\750-------------------------------
+2025-01-28 16:25:03,181 [MainThread] INFO EMIDEC_cascade - Epoch 381\750-------------------------------
+2025-01-28 16:25:14,384 [MainThread] INFO EMIDEC_cascade - Epoch 382\750-------------------------------
+2025-01-28 16:25:27,718 [MainThread] INFO EMIDEC_cascade - Epoch 383\750-------------------------------
+2025-01-28 16:25:39,937 [MainThread] INFO EMIDEC_cascade - Epoch 384\750-------------------------------
+2025-01-28 16:25:54,907 [MainThread] INFO EMIDEC_cascade - Epoch 385\750-------------------------------
+2025-01-28 16:26:07,417 [MainThread] INFO EMIDEC_cascade - Epoch 386\750-------------------------------
+2025-01-28 16:26:19,555 [MainThread] INFO EMIDEC_cascade - Epoch 387\750-------------------------------
+2025-01-28 16:26:31,846 [MainThread] INFO EMIDEC_cascade - Epoch 388\750-------------------------------
+2025-01-28 16:26:44,340 [MainThread] INFO EMIDEC_cascade - Epoch 389\750-------------------------------
+2025-01-28 16:26:58,370 [MainThread] INFO EMIDEC_cascade - Epoch 390\750-------------------------------
+2025-01-28 16:27:13,845 [MainThread] INFO EMIDEC_cascade - Epoch 391\750-------------------------------
+2025-01-28 16:27:25,963 [MainThread] INFO EMIDEC_cascade - Epoch 392\750-------------------------------
+2025-01-28 16:27:40,517 [MainThread] INFO EMIDEC_cascade - Epoch 393\750-------------------------------
+2025-01-28 16:27:54,733 [MainThread] INFO EMIDEC_cascade - Epoch 394\750-------------------------------
+2025-01-28 16:28:08,493 [MainThread] INFO EMIDEC_cascade - Epoch 395\750-------------------------------
+2025-01-28 16:28:22,184 [MainThread] INFO EMIDEC_cascade - Epoch 396\750-------------------------------
+2025-01-28 16:28:36,270 [MainThread] INFO EMIDEC_cascade - Epoch 397\750-------------------------------
+2025-01-28 16:28:48,273 [MainThread] INFO EMIDEC_cascade - Epoch 398\750-------------------------------
+2025-01-28 16:29:03,243 [MainThread] INFO EMIDEC_cascade - Epoch 399\750-------------------------------
+2025-01-28 16:29:16,832 [MainThread] INFO EMIDEC_cascade - Epoch 400\750-------------------------------
+2025-01-28 16:29:30,128 [MainThread] INFO EMIDEC_cascade - Epoch 401\750-------------------------------
+2025-01-28 16:29:44,163 [MainThread] INFO EMIDEC_cascade - Epoch 402\750-------------------------------
+2025-01-28 16:29:57,056 [MainThread] INFO EMIDEC_cascade - Epoch 403\750-------------------------------
+2025-01-28 16:30:10,918 [MainThread] INFO EMIDEC_cascade - Epoch 404\750-------------------------------
+2025-01-28 16:30:25,075 [MainThread] INFO EMIDEC_cascade - Epoch 405\750-------------------------------
+2025-01-28 16:30:38,757 [MainThread] INFO EMIDEC_cascade - Epoch 406\750-------------------------------
+2025-01-28 16:30:50,906 [MainThread] INFO EMIDEC_cascade - Epoch 407\750-------------------------------
+2025-01-28 16:31:05,954 [MainThread] INFO EMIDEC_cascade - Epoch 408\750-------------------------------
+2025-01-28 16:31:19,104 [MainThread] INFO EMIDEC_cascade - Epoch 409\750-------------------------------
+2025-01-28 16:31:31,453 [MainThread] INFO EMIDEC_cascade - Epoch 410\750-------------------------------
+2025-01-28 16:31:43,849 [MainThread] INFO EMIDEC_cascade - Epoch 411\750-------------------------------
+2025-01-28 16:31:56,052 [MainThread] INFO EMIDEC_cascade - Epoch 412\750-------------------------------
+2025-01-28 16:32:09,812 [MainThread] INFO EMIDEC_cascade - Epoch 413\750-------------------------------
+2025-01-28 16:32:22,519 [MainThread] INFO EMIDEC_cascade - Epoch 414\750-------------------------------
+2025-01-28 16:32:35,255 [MainThread] INFO EMIDEC_cascade - Epoch 415\750-------------------------------
+2025-01-28 16:32:47,440 [MainThread] INFO EMIDEC_cascade - Epoch 416\750-------------------------------
+2025-01-28 16:32:59,411 [MainThread] INFO EMIDEC_cascade - Epoch 417\750-------------------------------
+2025-01-28 16:33:12,020 [MainThread] INFO EMIDEC_cascade - Epoch 418\750-------------------------------
+2025-01-28 16:33:25,941 [MainThread] INFO EMIDEC_cascade - Epoch 419\750-------------------------------
+2025-01-28 16:33:39,657 [MainThread] INFO EMIDEC_cascade - Epoch 420\750-------------------------------
+2025-01-28 16:33:52,439 [MainThread] INFO EMIDEC_cascade - Epoch 421\750-------------------------------
+2025-01-28 16:34:05,628 [MainThread] INFO EMIDEC_cascade - Epoch 422\750-------------------------------
+2025-01-28 16:34:19,659 [MainThread] INFO EMIDEC_cascade - Epoch 423\750-------------------------------
+2025-01-28 16:34:33,102 [MainThread] INFO EMIDEC_cascade - Epoch 424\750-------------------------------
+2025-01-28 16:34:43,571 [MainThread] INFO EMIDEC_cascade - Epoch 425\750-------------------------------
+2025-01-28 16:34:57,025 [MainThread] INFO EMIDEC_cascade - Epoch 426\750-------------------------------
+2025-01-28 16:35:09,038 [MainThread] INFO EMIDEC_cascade - Epoch 427\750-------------------------------
+2025-01-28 16:35:22,831 [MainThread] INFO EMIDEC_cascade - Epoch 428\750-------------------------------
+2025-01-28 16:35:37,702 [MainThread] INFO EMIDEC_cascade - Epoch 429\750-------------------------------
+2025-01-28 16:35:50,771 [MainThread] INFO EMIDEC_cascade - Epoch 430\750-------------------------------
+2025-01-28 16:36:02,202 [MainThread] INFO EMIDEC_cascade - Epoch 431\750-------------------------------
+2025-01-28 16:36:14,080 [MainThread] INFO EMIDEC_cascade - Epoch 432\750-------------------------------
+2025-01-28 16:36:26,988 [MainThread] INFO EMIDEC_cascade - Epoch 433\750-------------------------------
+2025-01-28 16:36:39,781 [MainThread] INFO EMIDEC_cascade - Epoch 434\750-------------------------------
+2025-01-28 16:36:53,688 [MainThread] INFO EMIDEC_cascade - Epoch 435\750-------------------------------
+2025-01-28 16:37:07,416 [MainThread] INFO EMIDEC_cascade - Epoch 436\750-------------------------------
+2025-01-28 16:37:21,401 [MainThread] INFO EMIDEC_cascade - Epoch 437\750-------------------------------
+2025-01-28 16:37:34,412 [MainThread] INFO EMIDEC_cascade - Epoch 438\750-------------------------------
+2025-01-28 16:37:47,285 [MainThread] INFO EMIDEC_cascade - Epoch 439\750-------------------------------
+2025-01-28 16:38:01,037 [MainThread] INFO EMIDEC_cascade - Epoch 440\750-------------------------------
+2025-01-28 16:38:13,591 [MainThread] INFO EMIDEC_cascade - Epoch 441\750-------------------------------
+2025-01-28 16:38:26,268 [MainThread] INFO EMIDEC_cascade - Epoch 442\750-------------------------------
+2025-01-28 16:38:40,321 [MainThread] INFO EMIDEC_cascade - Epoch 443\750-------------------------------
+2025-01-28 16:38:53,975 [MainThread] INFO EMIDEC_cascade - Epoch 444\750-------------------------------
+2025-01-28 16:39:07,198 [MainThread] INFO EMIDEC_cascade - Epoch 445\750-------------------------------
+2025-01-28 16:39:19,561 [MainThread] INFO EMIDEC_cascade - Epoch 446\750-------------------------------
+2025-01-28 16:39:33,321 [MainThread] INFO EMIDEC_cascade - Epoch 447\750-------------------------------
+2025-01-28 16:39:45,436 [MainThread] INFO EMIDEC_cascade - Epoch 448\750-------------------------------
+2025-01-28 16:40:00,221 [MainThread] INFO EMIDEC_cascade - Epoch 449\750-------------------------------
+2025-01-28 16:40:12,265 [MainThread] INFO EMIDEC_cascade - Epoch 450\750-------------------------------
+2025-01-28 16:40:26,036 [MainThread] INFO EMIDEC_cascade - Epoch 451\750-------------------------------
+2025-01-28 16:40:41,162 [MainThread] INFO EMIDEC_cascade - Epoch 452\750-------------------------------
+2025-01-28 16:40:56,318 [MainThread] INFO EMIDEC_cascade - Epoch 453\750-------------------------------
+2025-01-28 16:41:08,485 [MainThread] INFO EMIDEC_cascade - Epoch 454\750-------------------------------
+2025-01-28 16:41:21,307 [MainThread] INFO EMIDEC_cascade - Epoch 455\750-------------------------------
+2025-01-28 16:41:33,233 [MainThread] INFO EMIDEC_cascade - Epoch 456\750-------------------------------
+2025-01-28 16:41:47,210 [MainThread] INFO EMIDEC_cascade - Epoch 457\750-------------------------------
+2025-01-28 16:42:00,814 [MainThread] INFO EMIDEC_cascade - Epoch 458\750-------------------------------
+2025-01-28 16:42:14,314 [MainThread] INFO EMIDEC_cascade - Epoch 459\750-------------------------------
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8284950256347656
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - Loss = -0.8561397314071655
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8361132740974426
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - blood dice = 0.949699878692627
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.853935718536377
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7778174877166748
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7629998326301575
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8284950256347656
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9486993551254272
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8451639413833618
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7283214330673218
+2025-01-28 16:42:28,234 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7917951345443726
+2025-01-28 16:42:28,316 [MainThread] INFO EMIDEC_cascade - Epoch 460\750-------------------------------
+2025-01-28 16:42:42,535 [MainThread] INFO EMIDEC_cascade - Epoch 461\750-------------------------------
+2025-01-28 16:42:54,354 [MainThread] INFO EMIDEC_cascade - Epoch 462\750-------------------------------
+2025-01-28 16:43:08,427 [MainThread] INFO EMIDEC_cascade - Epoch 463\750-------------------------------
+2025-01-28 16:43:21,516 [MainThread] INFO EMIDEC_cascade - Epoch 464\750-------------------------------
+2025-01-28 16:43:34,543 [MainThread] INFO EMIDEC_cascade - Epoch 465\750-------------------------------
+2025-01-28 16:43:46,688 [MainThread] INFO EMIDEC_cascade - Epoch 466\750-------------------------------
+2025-01-28 16:43:58,081 [MainThread] INFO EMIDEC_cascade - Epoch 467\750-------------------------------
+2025-01-28 16:44:12,881 [MainThread] INFO EMIDEC_cascade - Epoch 468\750-------------------------------
+2025-01-28 16:44:24,402 [MainThread] INFO EMIDEC_cascade - Epoch 469\750-------------------------------
+2025-01-28 16:44:38,312 [MainThread] INFO EMIDEC_cascade - Epoch 470\750-------------------------------
+2025-01-28 16:44:53,027 [MainThread] INFO EMIDEC_cascade - Epoch 471\750-------------------------------
+2025-01-28 16:45:05,586 [MainThread] INFO EMIDEC_cascade - Epoch 472\750-------------------------------
+2025-01-28 16:45:20,970 [MainThread] INFO EMIDEC_cascade - Epoch 473\750-------------------------------
+2025-01-28 16:45:35,662 [MainThread] INFO EMIDEC_cascade - Epoch 474\750-------------------------------
+2025-01-28 16:45:47,076 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8293805122375488
+2025-01-28 16:45:47,076 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - Loss = -0.8980130255222321
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.881242573261261
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9532715678215027
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8622260093688965
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8316497802734375
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.8778225779533386
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8293806314468384
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9504303932189941
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8487688899040222
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7335091233253479
+2025-01-28 16:45:47,077 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7848137617111206
+2025-01-28 16:45:47,157 [MainThread] INFO EMIDEC_cascade - Epoch 475\750-------------------------------
+2025-01-28 16:45:59,593 [MainThread] INFO EMIDEC_cascade - Epoch 476\750-------------------------------
+2025-01-28 16:46:13,052 [MainThread] INFO EMIDEC_cascade - Epoch 477\750-------------------------------
+2025-01-28 16:46:27,090 [MainThread] INFO EMIDEC_cascade - Epoch 478\750-------------------------------
+2025-01-28 16:46:40,914 [MainThread] INFO EMIDEC_cascade - Epoch 479\750-------------------------------
+2025-01-28 16:46:54,548 [MainThread] INFO EMIDEC_cascade - Epoch 480\750-------------------------------
+2025-01-28 16:47:08,232 [MainThread] INFO EMIDEC_cascade - Epoch 481\750-------------------------------
+2025-01-28 16:47:21,239 [MainThread] INFO EMIDEC_cascade - Epoch 482\750-------------------------------
+2025-01-28 16:47:33,328 [MainThread] INFO EMIDEC_cascade - Epoch 483\750-------------------------------
+2025-01-28 16:47:47,672 [MainThread] INFO EMIDEC_cascade - Epoch 484\750-------------------------------
+2025-01-28 16:48:00,669 [MainThread] INFO EMIDEC_cascade - Epoch 485\750-------------------------------
+2025-01-28 16:48:13,628 [MainThread] INFO EMIDEC_cascade - Epoch 486\750-------------------------------
+2025-01-28 16:48:26,240 [MainThread] INFO EMIDEC_cascade - Epoch 487\750-------------------------------
+2025-01-28 16:48:40,512 [MainThread] INFO EMIDEC_cascade - Epoch 488\750-------------------------------
+2025-01-28 16:48:54,119 [MainThread] INFO EMIDEC_cascade - Epoch 489\750-------------------------------
+2025-01-28 16:49:07,634 [MainThread] INFO EMIDEC_cascade - Epoch 490\750-------------------------------
+2025-01-28 16:49:20,249 [MainThread] INFO EMIDEC_cascade - Epoch 491\750-------------------------------
+2025-01-28 16:49:32,026 [MainThread] INFO EMIDEC_cascade - Epoch 492\750-------------------------------
+2025-01-28 16:49:45,162 [MainThread] INFO EMIDEC_cascade - Epoch 493\750-------------------------------
+2025-01-28 16:49:57,705 [MainThread] INFO EMIDEC_cascade - Epoch 494\750-------------------------------
+2025-01-28 16:50:09,663 [MainThread] INFO EMIDEC_cascade - Epoch 495\750-------------------------------
+2025-01-28 16:50:22,733 [MainThread] INFO EMIDEC_cascade - Epoch 496\750-------------------------------
+2025-01-28 16:50:36,025 [MainThread] INFO EMIDEC_cascade - Epoch 497\750-------------------------------
+2025-01-28 16:50:47,977 [MainThread] INFO EMIDEC_cascade - Epoch 498\750-------------------------------
+2025-01-28 16:51:01,615 [MainThread] INFO EMIDEC_cascade - Epoch 499\750-------------------------------
+2025-01-28 16:51:14,049 [MainThread] INFO EMIDEC_cascade - Epoch 500\750-------------------------------
+2025-01-28 16:51:27,271 [MainThread] INFO EMIDEC_cascade - Epoch 501\750-------------------------------
+2025-01-28 16:51:39,017 [MainThread] INFO EMIDEC_cascade - Epoch 502\750-------------------------------
+2025-01-28 16:51:52,375 [MainThread] INFO EMIDEC_cascade - Epoch 503\750-------------------------------
+2025-01-28 16:52:03,814 [MainThread] INFO EMIDEC_cascade - Epoch 504\750-------------------------------
+2025-01-28 16:52:16,981 [MainThread] INFO EMIDEC_cascade - Epoch 505\750-------------------------------
+2025-01-28 16:52:31,458 [MainThread] INFO EMIDEC_cascade - Epoch 506\750-------------------------------
+2025-01-28 16:52:46,811 [MainThread] INFO EMIDEC_cascade - Epoch 507\750-------------------------------
+2025-01-28 16:52:59,411 [MainThread] INFO EMIDEC_cascade - Epoch 508\750-------------------------------
+2025-01-28 16:53:11,834 [MainThread] INFO EMIDEC_cascade - Epoch 509\750-------------------------------
+2025-01-28 16:53:23,064 [MainThread] INFO EMIDEC_cascade - Epoch 510\750-------------------------------
+2025-01-28 16:53:35,153 [MainThread] INFO EMIDEC_cascade - Epoch 511\750-------------------------------
+2025-01-28 16:53:47,837 [MainThread] INFO EMIDEC_cascade - Epoch 512\750-------------------------------
+2025-01-28 16:54:02,148 [MainThread] INFO EMIDEC_cascade - Epoch 513\750-------------------------------
+2025-01-28 16:54:15,204 [MainThread] INFO EMIDEC_cascade - Epoch 514\750-------------------------------
+2025-01-28 16:54:26,349 [MainThread] INFO EMIDEC_cascade - Epoch 515\750-------------------------------
+2025-01-28 16:54:37,648 [MainThread] INFO EMIDEC_cascade - Epoch 516\750-------------------------------
+2025-01-28 16:54:51,429 [MainThread] INFO EMIDEC_cascade - Epoch 517\750-------------------------------
+2025-01-28 16:55:04,513 [MainThread] INFO EMIDEC_cascade - Epoch 518\750-------------------------------
+2025-01-28 16:55:17,241 [MainThread] INFO EMIDEC_cascade - Epoch 519\750-------------------------------
+2025-01-28 16:55:29,958 [MainThread] INFO EMIDEC_cascade - Epoch 520\750-------------------------------
+2025-01-28 16:55:44,168 [MainThread] INFO EMIDEC_cascade - Epoch 521\750-------------------------------
+2025-01-28 16:55:56,894 [MainThread] INFO EMIDEC_cascade - Epoch 522\750-------------------------------
+2025-01-28 16:56:09,396 [MainThread] INFO EMIDEC_cascade - Epoch 523\750-------------------------------
+2025-01-28 16:56:24,682 [MainThread] INFO EMIDEC_cascade - Epoch 524\750-------------------------------
+2025-01-28 16:56:39,157 [MainThread] INFO EMIDEC_cascade - Epoch 525\750-------------------------------
+2025-01-28 16:56:50,150 [MainThread] INFO EMIDEC_cascade - Epoch 526\750-------------------------------
+2025-01-28 16:57:04,240 [MainThread] INFO EMIDEC_cascade - Epoch 527\750-------------------------------
+2025-01-28 16:57:18,137 [MainThread] INFO EMIDEC_cascade - Epoch 528\750-------------------------------
+2025-01-28 16:57:29,921 [MainThread] INFO EMIDEC_cascade - Epoch 529\750-------------------------------
+2025-01-28 16:57:42,307 [MainThread] INFO EMIDEC_cascade - Epoch 530\750-------------------------------
+2025-01-28 16:57:55,818 [MainThread] INFO EMIDEC_cascade - Epoch 531\750-------------------------------
+2025-01-28 16:58:09,071 [MainThread] INFO EMIDEC_cascade - Epoch 532\750-------------------------------
+2025-01-28 16:58:22,900 [MainThread] INFO EMIDEC_cascade - Epoch 533\750-------------------------------
+2025-01-28 16:58:35,735 [MainThread] INFO EMIDEC_cascade - Epoch 534\750-------------------------------
+2025-01-28 16:58:49,742 [MainThread] INFO EMIDEC_cascade - Epoch 535\750-------------------------------
+2025-01-28 16:59:02,186 [MainThread] INFO EMIDEC_cascade - Epoch 536\750-------------------------------
+2025-01-28 16:59:14,274 [MainThread] INFO EMIDEC_cascade - Epoch 537\750-------------------------------
+2025-01-28 16:59:28,397 [MainThread] INFO EMIDEC_cascade - Epoch 538\750-------------------------------
+2025-01-28 16:59:40,079 [MainThread] INFO EMIDEC_cascade - Epoch 539\750-------------------------------
+2025-01-28 16:59:52,166 [MainThread] INFO EMIDEC_cascade - Epoch 540\750-------------------------------
+2025-01-28 17:00:05,760 [MainThread] INFO EMIDEC_cascade - Epoch 541\750-------------------------------
+2025-01-28 17:00:19,408 [MainThread] INFO EMIDEC_cascade - Epoch 542\750-------------------------------
+2025-01-28 17:00:33,870 [MainThread] INFO EMIDEC_cascade - Epoch 543\750-------------------------------
+2025-01-28 17:00:46,573 [MainThread] INFO EMIDEC_cascade - Epoch 544\750-------------------------------
+2025-01-28 17:00:58,759 [MainThread] INFO EMIDEC_cascade - Epoch 545\750-------------------------------
+2025-01-28 17:01:13,794 [MainThread] INFO EMIDEC_cascade - Epoch 546\750-------------------------------
+2025-01-28 17:01:27,061 [MainThread] INFO EMIDEC_cascade - Epoch 547\750-------------------------------
+2025-01-28 17:01:39,616 [MainThread] INFO EMIDEC_cascade - Epoch 548\750-------------------------------
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - New best Metric: Avg. = 0.8293838500976562
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - Training:
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - Loss = -0.8891635745763778
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8704981803894043
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - blood dice = 0.9546248316764832
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.8663905262947083
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - scar dice = 0.8278692960739136
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.833107590675354
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - Validation:
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - Mean dice = 0.8293837308883667
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - blood dice = 0.950131893157959
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - muscle dice = 0.849357008934021
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - scar dice = 0.7252167463302612
+2025-01-28 17:01:52,946 [MainThread] INFO EMIDEC_cascade - mvo dice = 0.7928296327590942
+2025-01-28 17:01:53,039 [MainThread] INFO EMIDEC_cascade - Epoch 549\750-------------------------------
+2025-01-28 17:02:06,333 [MainThread] INFO EMIDEC_cascade - Epoch 550\750-------------------------------
+2025-01-28 17:02:19,411 [MainThread] INFO EMIDEC_cascade - Epoch 551\750-------------------------------
+2025-01-28 17:02:32,940 [MainThread] INFO EMIDEC_cascade - Epoch 552\750-------------------------------
+2025-01-28 17:02:46,758 [MainThread] INFO EMIDEC_cascade - Epoch 553\750-------------------------------
+2025-01-28 17:02:58,658 [MainThread] INFO EMIDEC_cascade - Epoch 554\750-------------------------------
+2025-01-28 17:03:10,864 [MainThread] INFO EMIDEC_cascade - Epoch 555\750-------------------------------
+2025-01-28 17:03:22,374 [MainThread] INFO EMIDEC_cascade - Epoch 556\750-------------------------------
+2025-01-28 17:03:35,995 [MainThread] INFO EMIDEC_cascade - Epoch 557\750-------------------------------
+2025-01-28 17:03:47,251 [MainThread] INFO EMIDEC_cascade - Epoch 558\750-------------------------------
+2025-01-28 17:03:58,521 [MainThread] INFO EMIDEC_cascade - Epoch 559\750-------------------------------
+2025-01-28 17:04:10,021 [MainThread] INFO EMIDEC_cascade - Epoch 560\750-------------------------------
+2025-01-28 17:04:22,972 [MainThread] INFO EMIDEC_cascade - Epoch 561\750-------------------------------
+2025-01-28 17:04:35,871 [MainThread] INFO EMIDEC_cascade - Epoch 562\750-------------------------------
+2025-01-28 17:04:49,820 [MainThread] INFO EMIDEC_cascade - Epoch 563\750-------------------------------
+2025-01-28 17:05:04,478 [MainThread] INFO EMIDEC_cascade - Epoch 564\750-------------------------------
+2025-01-28 17:05:14,805 [MainThread] INFO EMIDEC_cascade - Epoch 565\750-------------------------------
+2025-01-28 17:05:28,489 [MainThread] INFO EMIDEC_cascade - Epoch 566\750-------------------------------
+2025-01-28 17:05:41,881 [MainThread] INFO EMIDEC_cascade - Epoch 567\750-------------------------------
+2025-01-28 17:05:54,805 [MainThread] INFO EMIDEC_cascade - Epoch 568\750-------------------------------
+2025-01-28 17:06:09,025 [MainThread] INFO EMIDEC_cascade - Epoch 569\750-------------------------------
+2025-01-28 17:06:22,125 [MainThread] INFO EMIDEC_cascade - Epoch 570\750-------------------------------
+2025-01-28 17:06:33,608 [MainThread] INFO EMIDEC_cascade - Epoch 571\750-------------------------------
+2025-01-28 17:06:46,286 [MainThread] INFO EMIDEC_cascade - Epoch 572\750-------------------------------
+2025-01-28 17:06:58,464 [MainThread] INFO EMIDEC_cascade - Epoch 573\750-------------------------------
+2025-01-28 17:07:11,090 [MainThread] INFO EMIDEC_cascade - Epoch 574\750-------------------------------
+2025-01-28 17:07:24,209 [MainThread] INFO EMIDEC_cascade - Epoch 575\750-------------------------------
+2025-01-28 17:07:38,746 [MainThread] INFO EMIDEC_cascade - Epoch 576\750-------------------------------
+2025-01-28 17:07:51,947 [MainThread] INFO EMIDEC_cascade - Epoch 577\750-------------------------------
+2025-01-28 17:08:04,400 [MainThread] INFO EMIDEC_cascade - Epoch 578\750-------------------------------
+2025-01-28 17:08:19,172 [MainThread] INFO EMIDEC_cascade - Epoch 579\750-------------------------------
+2025-01-28 17:08:30,140 [MainThread] INFO EMIDEC_cascade - Epoch 580\750-------------------------------
+2025-01-28 17:08:44,227 [MainThread] INFO EMIDEC_cascade - Epoch 581\750-------------------------------
+2025-01-28 17:08:58,332 [MainThread] INFO EMIDEC_cascade - Epoch 582\750-------------------------------
+2025-01-28 17:09:11,363 [MainThread] INFO EMIDEC_cascade - Epoch 583\750-------------------------------
+2025-01-28 17:09:23,296 [MainThread] INFO EMIDEC_cascade - Epoch 584\750-------------------------------
+2025-01-28 17:09:36,081 [MainThread] INFO EMIDEC_cascade - Epoch 585\750-------------------------------
+2025-01-28 17:09:48,373 [MainThread] INFO EMIDEC_cascade - Epoch 586\750-------------------------------
+2025-01-28 17:10:01,294 [MainThread] INFO EMIDEC_cascade - Epoch 587\750-------------------------------
+2025-01-28 17:10:15,516 [MainThread] INFO EMIDEC_cascade - Epoch 588\750-------------------------------
+2025-01-28 17:10:29,620 [MainThread] INFO EMIDEC_cascade - Epoch 589\750-------------------------------
+2025-01-28 17:10:44,374 [MainThread] INFO EMIDEC_cascade - Epoch 590\750-------------------------------
+2025-01-28 17:10:58,246 [MainThread] INFO EMIDEC_cascade - Epoch 591\750-------------------------------
+2025-01-28 17:11:11,586 [MainThread] INFO EMIDEC_cascade - Epoch 592\750-------------------------------
+2025-01-28 17:11:24,988 [MainThread] INFO EMIDEC_cascade - Epoch 593\750-------------------------------
+2025-01-28 17:11:36,423 [MainThread] INFO EMIDEC_cascade - Epoch 594\750-------------------------------
+2025-01-28 17:11:49,324 [MainThread] INFO EMIDEC_cascade - Epoch 595\750-------------------------------
+2025-01-28 17:12:02,991 [MainThread] INFO EMIDEC_cascade - Epoch 596\750-------------------------------
+2025-01-28 17:12:17,414 [MainThread] INFO EMIDEC_cascade - Epoch 597\750-------------------------------
+2025-01-28 17:12:30,469 [MainThread] INFO EMIDEC_cascade - Epoch 598\750-------------------------------
+2025-01-28 17:12:45,748 [MainThread] INFO EMIDEC_cascade - Epoch 599\750-------------------------------
+2025-01-28 17:12:59,030 [MainThread] INFO EMIDEC_cascade - Epoch 600\750-------------------------------
+2025-01-28 17:13:14,482 [MainThread] INFO EMIDEC_cascade - Epoch 601\750-------------------------------
+2025-01-28 17:13:28,075 [MainThread] INFO EMIDEC_cascade - Epoch 602\750-------------------------------
+2025-01-28 17:13:40,818 [MainThread] INFO EMIDEC_cascade - Epoch 603\750-------------------------------
+2025-01-28 17:13:54,005 [MainThread] INFO EMIDEC_cascade - Epoch 604\750-------------------------------
+2025-01-28 17:14:08,300 [MainThread] INFO EMIDEC_cascade - Epoch 605\750-------------------------------
+2025-01-28 17:14:21,276 [MainThread] INFO EMIDEC_cascade - Epoch 606\750-------------------------------
+2025-01-28 17:14:34,828 [MainThread] INFO EMIDEC_cascade - Epoch 607\750-------------------------------
+2025-01-28 17:14:47,688 [MainThread] INFO EMIDEC_cascade - Epoch 608\750-------------------------------
+2025-01-28 17:15:00,255 [MainThread] INFO EMIDEC_cascade - Epoch 609\750-------------------------------
+2025-01-28 17:15:12,862 [MainThread] INFO EMIDEC_cascade - Epoch 610\750-------------------------------
+2025-01-28 17:15:24,899 [MainThread] INFO EMIDEC_cascade - Epoch 611\750-------------------------------
+2025-01-28 17:15:37,032 [MainThread] INFO EMIDEC_cascade - Epoch 612\750-------------------------------
+2025-01-28 17:15:49,297 [MainThread] INFO EMIDEC_cascade - Epoch 613\750-------------------------------
+2025-01-28 17:16:03,537 [MainThread] INFO EMIDEC_cascade - Epoch 614\750-------------------------------
+2025-01-28 17:16:17,171 [MainThread] INFO EMIDEC_cascade - Epoch 615\750-------------------------------
+2025-01-28 17:16:29,755 [MainThread] INFO EMIDEC_cascade - Epoch 616\750-------------------------------
+2025-01-28 17:16:43,872 [MainThread] INFO EMIDEC_cascade - Epoch 617\750-------------------------------
+2025-01-28 17:16:57,541 [MainThread] INFO EMIDEC_cascade - Epoch 618\750-------------------------------
+2025-01-28 17:17:10,428 [MainThread] INFO EMIDEC_cascade - Epoch 619\750-------------------------------
+2025-01-28 17:17:24,186 [MainThread] INFO EMIDEC_cascade - Epoch 620\750-------------------------------
+2025-01-28 17:17:38,871 [MainThread] INFO EMIDEC_cascade - Epoch 621\750-------------------------------
+2025-01-28 17:17:52,949 [MainThread] INFO EMIDEC_cascade - Epoch 622\750-------------------------------
+2025-01-28 17:18:06,645 [MainThread] INFO EMIDEC_cascade - Epoch 623\750-------------------------------
+2025-01-28 17:18:20,304 [MainThread] INFO EMIDEC_cascade - Epoch 624\750-------------------------------
+2025-01-28 17:18:33,154 [MainThread] INFO EMIDEC_cascade - Epoch 625\750-------------------------------
+2025-01-28 17:18:46,336 [MainThread] INFO EMIDEC_cascade - Epoch 626\750-------------------------------
+2025-01-28 17:18:59,411 [MainThread] INFO EMIDEC_cascade - Epoch 627\750-------------------------------
+2025-01-28 17:19:13,784 [MainThread] INFO EMIDEC_cascade - Epoch 628\750-------------------------------
+2025-01-28 17:19:27,516 [MainThread] INFO EMIDEC_cascade - Epoch 629\750-------------------------------
+2025-01-28 17:19:42,074 [MainThread] INFO EMIDEC_cascade - Epoch 630\750-------------------------------
+2025-01-28 17:19:54,167 [MainThread] INFO EMIDEC_cascade - Epoch 631\750-------------------------------
+2025-01-28 17:20:08,855 [MainThread] INFO EMIDEC_cascade - Epoch 632\750-------------------------------
+2025-01-28 17:20:21,928 [MainThread] INFO EMIDEC_cascade - Epoch 633\750-------------------------------
+2025-01-28 17:20:34,621 [MainThread] INFO EMIDEC_cascade - Epoch 634\750-------------------------------
+2025-01-28 17:20:47,308 [MainThread] INFO EMIDEC_cascade - Epoch 635\750-------------------------------
+2025-01-28 17:21:00,189 [MainThread] INFO EMIDEC_cascade - Epoch 636\750-------------------------------
+2025-01-28 17:21:13,542 [MainThread] INFO EMIDEC_cascade - Epoch 637\750-------------------------------
+2025-01-28 17:21:26,579 [MainThread] INFO EMIDEC_cascade - Epoch 638\750-------------------------------
+2025-01-28 17:21:39,431 [MainThread] INFO EMIDEC_cascade - Epoch 639\750-------------------------------
+2025-01-28 17:21:50,060 [MainThread] INFO EMIDEC_cascade - Epoch 640\750-------------------------------
+2025-01-28 17:22:03,020 [MainThread] INFO EMIDEC_cascade - Epoch 641\750-------------------------------
+2025-01-28 17:22:16,011 [MainThread] INFO EMIDEC_cascade - Epoch 642\750-------------------------------
+2025-01-28 17:22:29,519 [MainThread] INFO EMIDEC_cascade - Epoch 643\750-------------------------------
+2025-01-28 17:22:42,172 [MainThread] INFO EMIDEC_cascade - Epoch 644\750-------------------------------
+2025-01-28 17:22:55,150 [MainThread] INFO EMIDEC_cascade - Epoch 645\750-------------------------------
+2025-01-28 17:23:06,814 [MainThread] INFO EMIDEC_cascade - Epoch 646\750-------------------------------
+2025-01-28 17:23:19,169 [MainThread] INFO EMIDEC_cascade - Epoch 647\750-------------------------------
+2025-01-28 17:23:32,946 [MainThread] INFO EMIDEC_cascade - Epoch 648\750-------------------------------
+2025-01-28 17:23:45,680 [MainThread] INFO EMIDEC_cascade - Epoch 649\750-------------------------------
+2025-01-28 17:23:58,683 [MainThread] INFO EMIDEC_cascade - Epoch 650\750-------------------------------
+2025-01-28 17:24:10,824 [MainThread] INFO EMIDEC_cascade - Epoch 651\750-------------------------------
+2025-01-28 17:24:25,042 [MainThread] INFO EMIDEC_cascade - Epoch 652\750-------------------------------
+2025-01-28 17:24:39,575 [MainThread] INFO EMIDEC_cascade - Epoch 653\750-------------------------------
+2025-01-28 17:24:53,156 [MainThread] INFO EMIDEC_cascade - Epoch 654\750-------------------------------
+2025-01-28 17:25:06,351 [MainThread] INFO EMIDEC_cascade - Epoch 655\750-------------------------------
+2025-01-28 17:25:21,070 [MainThread] INFO EMIDEC_cascade - Epoch 656\750-------------------------------
+2025-01-28 17:25:33,515 [MainThread] INFO EMIDEC_cascade - Epoch 657\750-------------------------------
+2025-01-28 17:25:45,057 [MainThread] INFO EMIDEC_cascade - Epoch 658\750-------------------------------
+2025-01-28 17:25:59,754 [MainThread] INFO EMIDEC_cascade - Epoch 659\750-------------------------------
+2025-01-28 17:26:11,709 [MainThread] INFO EMIDEC_cascade - Epoch 660\750-------------------------------
+2025-01-28 17:26:22,117 [MainThread] INFO EMIDEC_cascade - Epoch 661\750-------------------------------
+2025-01-28 17:26:34,496 [MainThread] INFO EMIDEC_cascade - Epoch 662\750-------------------------------
+2025-01-28 17:26:47,575 [MainThread] INFO EMIDEC_cascade - Epoch 663\750-------------------------------
+2025-01-28 17:27:01,014 [MainThread] INFO EMIDEC_cascade - Epoch 664\750-------------------------------
+2025-01-28 17:27:15,108 [MainThread] INFO EMIDEC_cascade - Epoch 665\750-------------------------------
+2025-01-28 17:27:28,951 [MainThread] INFO EMIDEC_cascade - Epoch 666\750-------------------------------
+2025-01-28 17:27:41,543 [MainThread] INFO EMIDEC_cascade - Epoch 667\750-------------------------------
+2025-01-28 17:27:54,847 [MainThread] INFO EMIDEC_cascade - Epoch 668\750-------------------------------
+2025-01-28 17:28:09,235 [MainThread] INFO EMIDEC_cascade - Epoch 669\750-------------------------------
+2025-01-28 17:28:23,706 [MainThread] INFO EMIDEC_cascade - Epoch 670\750-------------------------------
+2025-01-28 17:28:37,234 [MainThread] INFO EMIDEC_cascade - Epoch 671\750-------------------------------
+2025-01-28 17:28:49,078 [MainThread] INFO EMIDEC_cascade - Epoch 672\750-------------------------------
+2025-01-28 17:29:01,740 [MainThread] INFO EMIDEC_cascade - Epoch 673\750-------------------------------
+2025-01-28 17:29:16,111 [MainThread] INFO EMIDEC_cascade - Epoch 674\750-------------------------------
+2025-01-28 17:29:29,217 [MainThread] INFO EMIDEC_cascade - Epoch 675\750-------------------------------
+2025-01-28 17:29:41,948 [MainThread] INFO EMIDEC_cascade - Epoch 676\750-------------------------------
+2025-01-28 17:29:55,205 [MainThread] INFO EMIDEC_cascade - Epoch 677\750-------------------------------
+2025-01-28 17:30:07,079 [MainThread] INFO EMIDEC_cascade - Epoch 678\750-------------------------------
+2025-01-28 17:30:18,648 [MainThread] INFO EMIDEC_cascade - Epoch 679\750-------------------------------
+2025-01-28 17:30:29,512 [MainThread] INFO EMIDEC_cascade - Epoch 680\750-------------------------------
+2025-01-28 17:30:42,391 [MainThread] INFO EMIDEC_cascade - Epoch 681\750-------------------------------
+2025-01-28 17:30:56,240 [MainThread] INFO EMIDEC_cascade - Epoch 682\750-------------------------------
+2025-01-28 17:31:10,357 [MainThread] INFO EMIDEC_cascade - Epoch 683\750-------------------------------
+2025-01-28 17:31:24,004 [MainThread] INFO EMIDEC_cascade - Epoch 684\750-------------------------------
+2025-01-28 17:31:39,522 [MainThread] INFO EMIDEC_cascade - Epoch 685\750-------------------------------
+2025-01-28 17:31:52,778 [MainThread] INFO EMIDEC_cascade - Epoch 686\750-------------------------------
+2025-01-28 17:32:06,223 [MainThread] INFO EMIDEC_cascade - Epoch 687\750-------------------------------
+2025-01-28 17:32:19,816 [MainThread] INFO EMIDEC_cascade - Epoch 688\750-------------------------------
+2025-01-28 17:32:34,123 [MainThread] INFO EMIDEC_cascade - Epoch 689\750-------------------------------
+2025-01-28 17:32:47,921 [MainThread] INFO EMIDEC_cascade - Epoch 690\750-------------------------------
+2025-01-28 17:33:00,512 [MainThread] INFO EMIDEC_cascade - Epoch 691\750-------------------------------
+2025-01-28 17:33:13,672 [MainThread] INFO EMIDEC_cascade - Epoch 692\750-------------------------------
+2025-01-28 17:33:27,644 [MainThread] INFO EMIDEC_cascade - Epoch 693\750-------------------------------
+2025-01-28 17:33:40,830 [MainThread] INFO EMIDEC_cascade - Epoch 694\750-------------------------------
+2025-01-28 17:33:56,150 [MainThread] INFO EMIDEC_cascade - Epoch 695\750-------------------------------
+2025-01-28 17:34:08,412 [MainThread] INFO EMIDEC_cascade - Epoch 696\750-------------------------------
+2025-01-28 17:34:20,937 [MainThread] INFO EMIDEC_cascade - Epoch 697\750-------------------------------
+2025-01-28 17:34:33,948 [MainThread] INFO EMIDEC_cascade - Epoch 698\750-------------------------------
+2025-01-28 17:34:46,811 [MainThread] INFO EMIDEC_cascade - Epoch 699\750-------------------------------
+2025-01-28 17:34:59,249 [MainThread] INFO EMIDEC_cascade - Epoch 700\750-------------------------------
+2025-01-28 17:35:13,569 [MainThread] INFO EMIDEC_cascade - Epoch 701\750-------------------------------
+2025-01-28 17:35:26,873 [MainThread] INFO EMIDEC_cascade - Epoch 702\750-------------------------------
+2025-01-28 17:35:41,126 [MainThread] INFO EMIDEC_cascade - Epoch 703\750-------------------------------
+2025-01-28 17:35:53,946 [MainThread] INFO EMIDEC_cascade - Epoch 704\750-------------------------------
+2025-01-28 17:36:06,759 [MainThread] INFO EMIDEC_cascade - Epoch 705\750-------------------------------
+2025-01-28 17:36:20,004 [MainThread] INFO EMIDEC_cascade - Epoch 706\750-------------------------------
+2025-01-28 17:36:35,172 [MainThread] INFO EMIDEC_cascade - Epoch 707\750-------------------------------
+2025-01-28 17:36:51,197 [MainThread] INFO EMIDEC_cascade - Epoch 708\750-------------------------------
+2025-01-28 17:37:03,284 [MainThread] INFO EMIDEC_cascade - Epoch 709\750-------------------------------
+2025-01-28 17:37:15,272 [MainThread] INFO EMIDEC_cascade - Epoch 710\750-------------------------------
+2025-01-28 17:37:29,941 [MainThread] INFO EMIDEC_cascade - Epoch 711\750-------------------------------
+2025-01-28 17:37:43,315 [MainThread] INFO EMIDEC_cascade - Epoch 712\750-------------------------------
+2025-01-28 17:37:56,896 [MainThread] INFO EMIDEC_cascade - Epoch 713\750-------------------------------
+2025-01-28 17:38:10,004 [MainThread] INFO EMIDEC_cascade - Epoch 714\750-------------------------------
+2025-01-28 17:38:23,024 [MainThread] INFO EMIDEC_cascade - Epoch 715\750-------------------------------
+2025-01-28 17:38:37,846 [MainThread] INFO EMIDEC_cascade - Epoch 716\750-------------------------------
+2025-01-28 17:38:52,214 [MainThread] INFO EMIDEC_cascade - Epoch 717\750-------------------------------
+2025-01-28 17:39:03,807 [MainThread] INFO EMIDEC_cascade - Epoch 718\750-------------------------------
+2025-01-28 17:39:15,780 [MainThread] INFO EMIDEC_cascade - Epoch 719\750-------------------------------
+2025-01-28 17:39:29,385 [MainThread] INFO EMIDEC_cascade - Epoch 720\750-------------------------------
+2025-01-28 17:39:42,382 [MainThread] INFO EMIDEC_cascade - Epoch 721\750-------------------------------
+2025-01-28 17:39:55,434 [MainThread] INFO EMIDEC_cascade - Epoch 722\750-------------------------------
+2025-01-28 17:40:09,713 [MainThread] INFO EMIDEC_cascade - Epoch 723\750-------------------------------
+2025-01-28 17:40:22,087 [MainThread] INFO EMIDEC_cascade - Epoch 724\750-------------------------------
+2025-01-28 17:40:34,385 [MainThread] INFO EMIDEC_cascade - Epoch 725\750-------------------------------
+2025-01-28 17:40:48,077 [MainThread] INFO EMIDEC_cascade - Epoch 726\750-------------------------------
+2025-01-28 17:41:01,960 [MainThread] INFO EMIDEC_cascade - Epoch 727\750-------------------------------
+2025-01-28 17:41:16,185 [MainThread] INFO EMIDEC_cascade - Epoch 728\750-------------------------------
+2025-01-28 17:41:28,680 [MainThread] INFO EMIDEC_cascade - Epoch 729\750-------------------------------
+2025-01-28 17:41:40,641 [MainThread] INFO EMIDEC_cascade - Epoch 730\750-------------------------------
+2025-01-28 17:41:54,811 [MainThread] INFO EMIDEC_cascade - Epoch 731\750-------------------------------
+2025-01-28 17:42:08,931 [MainThread] INFO EMIDEC_cascade - Epoch 732\750-------------------------------
+2025-01-28 17:42:22,824 [MainThread] INFO EMIDEC_cascade - Epoch 733\750-------------------------------
+2025-01-28 17:42:35,886 [MainThread] INFO EMIDEC_cascade - Epoch 734\750-------------------------------
+2025-01-28 17:42:47,970 [MainThread] INFO EMIDEC_cascade - Epoch 735\750-------------------------------
+2025-01-28 17:43:01,266 [MainThread] INFO EMIDEC_cascade - Epoch 736\750-------------------------------
+2025-01-28 17:43:14,343 [MainThread] INFO EMIDEC_cascade - Epoch 737\750-------------------------------
+2025-01-28 17:43:28,974 [MainThread] INFO EMIDEC_cascade - Epoch 738\750-------------------------------
+2025-01-28 17:43:40,961 [MainThread] INFO EMIDEC_cascade - Epoch 739\750-------------------------------
+2025-01-28 17:43:52,455 [MainThread] INFO EMIDEC_cascade - Epoch 740\750-------------------------------
+2025-01-28 17:44:07,232 [MainThread] INFO EMIDEC_cascade - Epoch 741\750-------------------------------
+2025-01-28 17:44:20,510 [MainThread] INFO EMIDEC_cascade - Epoch 742\750-------------------------------
+2025-01-28 17:44:35,425 [MainThread] INFO EMIDEC_cascade - Epoch 743\750-------------------------------
+2025-01-28 17:44:48,702 [MainThread] INFO EMIDEC_cascade - Epoch 744\750-------------------------------
+2025-01-28 17:45:01,464 [MainThread] INFO EMIDEC_cascade - Epoch 745\750-------------------------------
+2025-01-28 17:45:15,038 [MainThread] INFO EMIDEC_cascade - Epoch 746\750-------------------------------
+2025-01-28 17:45:28,934 [MainThread] INFO EMIDEC_cascade - Epoch 747\750-------------------------------
+2025-01-28 17:45:40,959 [MainThread] INFO EMIDEC_cascade - Epoch 748\750-------------------------------
+2025-01-28 17:45:55,424 [MainThread] INFO EMIDEC_cascade - Epoch 749\750-------------------------------

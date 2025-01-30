@@ -100,7 +100,7 @@ class CardioDataset(torch.utils.data.Dataset):
             transforms.append(Gaussian_noise(**kwargs.get("gaussian")))
         if kwargs.get("gaussianblur") is not None:
             transforms.append(GaussianBlur(**kwargs.get("gaussianblur")))    
-        if kwargs.get("brighness") is not None:
+        if kwargs.get("brightness") is not None:
             transforms.append(Brightness(**kwargs.get("brightness")))
         if kwargs.get("contrast") is not None:
             transforms.append(Contrast(**kwargs.get("contrast")))  

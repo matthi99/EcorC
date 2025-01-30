@@ -1,0 +1,15 @@
+Case N070
+
+Gap between slices : 10 mm
+Sex : F
+Age : 69 
+Tobacco : 1
+Overweight : Y
+Arterial hypertension : N
+Diabetes : N
+Familial history of coronary artery disease: N
+ECG (ST +) : N
+Troponin : 1.1
+Killip Max: 2
+FEVG : 50
+NTProBNP : 7424

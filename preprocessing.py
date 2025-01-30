@@ -32,13 +32,13 @@ if args.dataset_name == "EMIDEC":
     for patient in train_patients:
         data={}
         #load images
-        img  = nib.load(os.path.join(train_folder,patient,'images',patient+'.nii.gz')).get_fdata()
+        img  = nib.load(os.path.join(train_folder,patient,'Images',patient+'.nii.gz')).get_fdata()
         data['center']=(img.shape[0]//2, img.shape[1]//2)
         img=np.transpose(img,(2,0,1))
         data['img']=img
         
         #create masks
-        cont  = nib.load(train_folder+patient+'/contours/'+patient+'.nii.gz').get_fdata()
+        cont  = nib.load(train_folder+patient+'/Contours/'+patient+'.nii.gz').get_fdata()
         cont = np.transpose(cont,(2,0,1))
         
         temp=np.copy(cont)
@@ -87,6 +87,7 @@ if args.dataset_name == "EMIDEC":
         "in_channels3d": 3, 
         "lr2d": 5*1e-3, 
         "lr3d": 1e-2, 
+        "dropout3d": 0.1,
         "perturbation": [0.1, 0.05, 0.1, 0.1, 0.02, 0.63], 
         "classes": ["bg", "blood", "muscle", "scar", "mvo"],
         "cross_validation": Config_EMIDEC.cross_validation,
@@ -111,9 +112,12 @@ elif args.dataset_name == "MyoPS":
         
     train_gt =os.path.join(train_folder, 'train25_myops_gd/')
     train_img =os.path.join(train_folder, 'train25/')
+
     
-    files_gt=[train_gt+f for f in os.listdir(train_gt)]
-    files_imgs=[train_img+f for f in os.listdir(train_img) if f.endswith("DE.nii.gz")]
+    files_gt=sorted([train_gt+f for f in os.listdir(train_gt)])
+    files_imgs=sorted([train_img+f for f in os.listdir(train_img) if f.endswith("DE.nii.gz")])
+    
+    
     
     for gt,im in zip(files_gt, files_imgs):
         data={}
@@ -173,6 +177,7 @@ elif args.dataset_name == "MyoPS":
         "batchsize3d":4, 
         "out_channels": 4,
         "in_channels3d": 2, 
+        "dropout3d": 0.05,
         "perturbation": [0.1, 0.05, 0.1, 0.1, 0.1, 0.55], 
         "classes": ["bg", "blood", "muscle", "scar"],
         "cross_validation": Config_MyoPS.cross_validation,

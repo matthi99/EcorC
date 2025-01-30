@@ -1,0 +1,15 @@
+Case N052
+
+Gap between slices : 10 mm
+Sex : F
+Age : 85
+Tobacco : 3
+Overweight : Y
+Arterial hypertension : Y
+Diabetes : N
+Familial history of coronary artery disease: N
+ECG (ST +) : N
+Troponin : 2
+Killip Max: 1
+FEVG : 38
+NTProBNP : 781

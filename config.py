@@ -88,7 +88,6 @@ class Config_EMIDEC:
             "contrast_range": (0.6, 1.55), 
             "p_per_sample": 0.15
             }, 
-        "brightness":{},
         "gaussianblur":{
             "blur_sigma": (0.5, 1.5), 
             "p_per_sample": 0.1
@@ -146,28 +145,28 @@ class Config_MyoPS:
             "translation": 4
             },
         "gamma": {
-            "retain_stats":True, 
-            "gamma_range": (0.65, 1.55), 
+            "retain_stats":True,
+            "gamma_range": (0.7, 1.5),
             "p_per_sample": 0.15
             },
         "lowres": {
-            "scale_factor": (0.45, 1),
+            "scale_factor": (0.5, 1),
             "p_per_sample": 0.15,
             },
         "contrast": {
-            "contrast_range": (0.6, 1.55), 
+            "contrast_range": (0.65, 1.5),
             "p_per_sample": 0.15
-            }, 
-        "brightness":{},
+            },
         "gaussianblur":{
-            "blur_sigma": (0.5, 1.5), 
+            "blur_sigma": (0.5, 1.5),
             "p_per_sample": 0.1
-            }, 
+            },
         "gaussian":{
-            "sigma":0.1, 
+            "sigma":0.1,
             "p_gaussian":0.15},
-        "flip":True, 
+        "flip":True,
         }
+    
     
     
     train_data_setup_3d = {
@@ -196,7 +195,6 @@ class Config_MyoPS:
            "contrast_range": (0.6, 1.55), 
            "p_per_sample": 0.15
            }, 
-       "brightness":{},
        "gaussianblur":{
            "blur_sigma": (0.5, 1.5), 
            "p_per_sample": 0.1
@@ -206,6 +204,7 @@ class Config_MyoPS:
            "p_gaussian":0.15},
        "flip":False, 
        }
+
     
     
     val_data_setup = {

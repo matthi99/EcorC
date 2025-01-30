@@ -1,0 +1,15 @@
+Case P080
+
+Gap between slices : 8 mm
+Sex : M
+Age : 57 
+Tobacco : 1
+Overweight : N
+Arterial hypertension :N
+Diabetes : N
+Familial history of coronary artery disease: N
+ECG (ST +) : Y
+Troponin : 26
+Killip Max: 1
+FEVG : 55
+NTProBNP : 65

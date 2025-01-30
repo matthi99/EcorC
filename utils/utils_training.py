@@ -313,3 +313,38 @@ def get_logger(name, level=logging.INFO, formatter = '%(asctime)s [%(threadName)
         logger.addHandler(stream_handler)
         logger.handler_set = True
     return logger
+
+def predict2d(im, net):
+    out = net(im)[0]
+    out += torch.flip(net(torch.flip(im, dims=[2]))[0], dims=[2])
+    out +=  torch.flip(net(torch.flip(im, dims=[3]))[0], dims=[3])
+    return out
+
+def predict2d_cascade(im,net2d, classes):
+    in2d=torch.moveaxis(im,2,0)
+    out2d=[]
+    for b in range(im.shape[0]):
+        with torch.no_grad():
+            temp=net2d(in2d[:,b,...])[0]
+        temp=torch.moveaxis(temp,0,1)
+        temp=torch.argmax(temp,0).long()
+        temp=torch.nn.functional.one_hot(temp,classes)
+        temp=torch.moveaxis(temp,-1,0)
+        out2d.append(temp[3:classes])
+    out2d=torch.stack(out2d,0)
+    return out2d
+
+def predict_cascade(im, net2d, net3d, classes):
+    out2d = predict2d_cascade(im,net2d, classes)
+    in3d=torch.cat((im,out2d),1)
+    out=net3d(in3d)[0]
+    
+    out2d = torch.flip(predict2d_cascade(torch.flip(im, dims=[3]),net2d, classes), dims =[3])
+    in3d=torch.cat((im,out2d),1)
+    out+=net3d(in3d)[0]
+    
+    out2d = torch.flip(predict2d_cascade(torch.flip(im, dims=[4]),net2d, classes), dims =[4])
+    in3d=torch.cat((im,out2d),1)
+    out+=net3d(in3d)[0]
+    return out
+    
