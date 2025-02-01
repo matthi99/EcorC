@@ -5,7 +5,7 @@
 This repository is created for the publication:
 
 ```
-Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (2023). Error correcting 2D-3D cascaded network for myocardial infarct scar segmentation on late gadolinium enhancement cardiac magnetic resonance images. *arXiv preprint arXiv:2306.14725, 2023.*
+Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (2023). Error correcting 2D-3D cascaded network for myocardial infarct scar segmentation on late gadolinium enhancement cardiac magnetic resonance images. arXiv preprint arXiv:2306.14725, 2023.
 ```
 
 
