@@ -5,7 +5,7 @@
 This repository is created for the publication:
 
 ```
-Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (2023). Error correcting 2D-3D cascaded network for myocardial infarct scar segmentation on late gadolinium enhancement cardiac magnetic resonance images. Best Journal you can imagine, 62, 66-83.
+Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (2023). Error correcting 2D-3D cascaded network for myocardial infarct scar segmentation on late gadolinium enhancement cardiac magnetic resonance images. *arXiv preprint arXiv:2306.14725, 2023.*
 ```
 
 
@@ -16,7 +16,7 @@ Schwab, M., Pamminger, M., Kremser, C., Obmann, D., Haltmeier, M., Mayr, A. (202
 git clone https://github.com/matthi99/EcorC.git
 ``` 
 
-2. Intall and activate the virtual environment.
+2. Install and activate the virtual environment.
 ```
 cd EcorC
 conda env create -f env_lge.yml
