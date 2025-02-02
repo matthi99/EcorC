@@ -1,4 +1,4 @@
-name: test
+name: env_lge
 channels:
   - defaults
   - bioconda
