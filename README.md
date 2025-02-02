@@ -21,7 +21,11 @@ git clone https://github.com/matthi99/EcorC.git
 cd EcorC
 conda env create -f env_lge.yml
 conda activate env_lge
-``` 
+```
+3. Install [PyTorch](https://pytorch.org/get-started/locally/)
+```
+pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu118
+```
 
 # Usage
 
